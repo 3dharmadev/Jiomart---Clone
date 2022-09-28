@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signIn</title>
+ <link rel="stylesheet" href="../styles/signIn.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <div onclick="refresh()">
+            <div>JioMart</div>
+            <div>BETA</div>
+        </div>
+    </div>
+    <div id="cont">
+        <div>
+            <img src="https://www.jiomart.com/msassets/images/login-banner.jpg" alt="">
+        </div>
+        <div id="checkSignIn">
+            <form action="" id="form" onsubmit="checkSignIn(event)">
+                <div class="signInText">Sign in</div>
+                <div class="request">Please enter your details</div>
+                <label for="txt">+91</label>
+                <input type="number" id="txt" placeholder="Enter Your Mobile Number...">
+                <input type="password" placeholder="Enter your password if you already a user" id="pwd">
+                <input style="font-size: 25px; color: white;" type="submit" class="btn" value=">">
+            </form>
+        </div>
+    </div>
+   <script src="../scripts/signIn.js"></script>
+</body>
+
+</html>
