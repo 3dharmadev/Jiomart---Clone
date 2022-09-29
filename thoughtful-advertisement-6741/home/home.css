@@ -1,5 +1,7 @@
 
 /* ___________________________-CSS FOR SLIDE-_____________________________ */
+
+
 #First_slid_sliderframe{
     height:97%;
     overflow: hidden;
@@ -38,8 +40,8 @@ margin-left: -200%;
 
 .radio-btn {
 width: 9px;
-height: 9px;
-border-radius: 5px;
+height: 18px;
+border-radius:2px;
 background: gray;
 display: inline-block !important;
 margin: 0 1px;
@@ -92,12 +94,28 @@ animation: slide 12300ms infinite;
 
 /* POSTER */
 #kclowest{
+    border:1px solid green;
     height: 150px;
-    background: url(https://www.jiomart.com/images/cms/aw_rbslider/slides/1654714506_Free-Home-Delivery--strip-1240-X-162.jpg);
+    height:100%;
+    margin-top:6px;
+    /* margin-bottom:6px; */
+    
+}
+#kclowest>img{
+    width:100%;
+    height:200px;
 }
 #kctrends{
+    border:1px solid green;
+    height: 150px;
+    height:100%;
+    margin-top:6px;
     height: 200px;
-    background: url(https://www.jiomart.com/images/cms/aw_rbslider/slides/1663775475_Slim-Banner_web.jpg);
+   
+}
+#kctrends>img{
+    width:100%;
+    height:200px;
 }
 #kctopcat{
     display: flex;
@@ -130,7 +148,7 @@ border-top: 10px solid rgb(243, 23, 23);
 border-radius: 10%;
 }
 #kcdaily>div>a>img:hover{
-    width: 45%;
+    width: 50%;
 }
 .kcdis{
     margin: auto;
@@ -142,7 +160,7 @@ border-radius: 10%;
     border-bottom-right-radius: 50%;
 }
 #kcdaily>div>a>img{
-    width: 50%;
+    width: 45%;
 }
 /* END daily essentials */
 /* ======================================================================== */
