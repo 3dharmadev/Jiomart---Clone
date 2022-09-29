@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
  </head>
- <link rel="stylesheet" href="./grocery.css">
+ <link rel="stylesheet" href="./css/grocery.css">
  <body>
 
     <img id="img" src="https://www.jiomart.com/images/category/219/fruits-vegetables-20220519.jpeg" alt="">
      <div id="sort">
-        <select name="" id="">
-            <option value="">Search Less Than</option>
-            <option value="100">Between 100</option>
-            <option value="300">Between 300</option>
-            <option value="500">Between 500</option>
+        <select name="" onclick="filter()" id="filter">
+            <option value="">Search Between</option>
+            <option value="50">50</option>
+            <option value="90">90</option>
+            <option value="150">150</option>
         </select>
-        <button>Low to High</button>
-        <button>High to Low</button>
+        <button onclick="LTH()">Low to High</button>
+        <button onclick="HTL()">High to Low</button>
      </div>
     <div id="container"></div>
      
@@ -27,84 +27,4 @@
  </html>
 <script > </script>
 
-<script>
-    
-    let container=document.getElementById("container");
-
-  let arr__data=[
-    {name:"Coconut 1 pc (350g.)",price:"₹23",img:"https://www.jiomart.com/images/product/150x150/590000086/coconut-1-pc-approx-350-g-600-g-product-images-o590000086-p590000086-0-202203170206.jpg"},
-    {name:"Mosambi 1 kg",price:"₹43",img:"https://www.jiomart.com/images/product/150x150/590000448/mosambi-1-kg-product-images-o590000448-p590000448-0-202203170909.jpg"},
-    {name:"Tender Coconut 1 pc(800g.-1500g.)",price:"₹43",img:"https://www.jiomart.com/images/product/150x150/590000097/tender-coconut-1-pc-approx-800-g-1500-g-product-images-o590000097-p590000097-0-202203170923.jpg"},
-    {name:"Tomato  1 kg",price:"₹40" ,img:"https://www.jiomart.com/images/product/150x150/590003517/tomato-1-kg-product-images-o590003517-p590003517-0-202203170629.jpg"},
-    {name:"Sweet Corn  1 pc",price:"₹18" ,img:"https://www.jiomart.com/images/product/150x150/590001266/sweet-corn-1-pc-approx-250-g-450-g-product-images-o590001266-p590001266-0-202203170359.jpg"},
-
-    {name:"Button Mushroom  1 kg",price:"₹18" ,img:"https://www.jiomart.com/images/product/150x150/590000245/button-mushroom-200-g-product-images-o590000245-p590000245-0-202203151749.jpg"},
-
-    {name:"Mosambi  1 kg",price:"₹40" ,img:"https://www.jiomart.com/images/product/150x150/590006806/mosambi-3-kg-pack-product-images-o590006806-p590032918-0-202203150754.jpg"},
-
-   
-
-
-    {name:"Papaya  1 kg",price:"₹40" ,img:"https://www.jiomart.com/images/product/150x150/590001247/papaya-each-approx-800-g-1600-g-product-images-o590001247-p590001247-0-202203170247.jpg"},
-    {name:"Coconut 1 pc (350g.)",price:"₹23",img:"https://www.jiomart.com/images/product/150x150/590000086/coconut-1-pc-approx-350-g-600-g-product-images-o590000086-p590000086-0-202203170206.jpg"},
-    {name:"Mosambi 1 kg",price:"₹43",img:"https://www.jiomart.com/images/product/150x150/590000448/mosambi-1-kg-product-images-o590000448-p590000448-0-202203170909.jpg"},
-    {name:"Tender Coconut 1 pc(800g.-1500g.)",price:"₹43",img:"https://www.jiomart.com/images/product/150x150/590000097/tender-coconut-1-pc-approx-800-g-1500-g-product-images-o590000097-p590000097-0-202203170923.jpg"},
-    {name:"Tomato  1 kg",price:"₹40" ,img:"https://www.jiomart.com/images/product/150x150/590003517/tomato-1-kg-product-images-o590003517-p590003517-0-202203170629.jpg"},
-    {name:"Sweet Corn  1 pc",price:"₹18" ,img:"https://www.jiomart.com/images/product/150x150/590001266/sweet-corn-1-pc-approx-250-g-450-g-product-images-o590001266-p590001266-0-202203170359.jpg"},
-
-    {name:"Button Mushroom  1 kg",price:"₹18" ,img:"https://www.jiomart.com/images/product/150x150/590000245/button-mushroom-200-g-product-images-o590000245-p590000245-0-202203151749.jpg"},
-
-    {name:"Mosambi  1 kg",price:"₹40" ,img:"https://www.jiomart.com/images/product/150x150/590006806/mosambi-3-kg-pack-product-images-o590006806-p590032918-0-202203150754.jpg"},
-
-   
-    {name:"Papaya  1 kg",price:"₹40" ,img:"https://www.jiomart.com/images/product/150x150/590001247/papaya-each-approx-800-g-1600-g-product-images-o590001247-p590001247-0-202203170247.jpg"}
-  ];
-
-
-let renderDom =(index) =>{
-  container.innerHTML="";
-
-  let start = index*8;
-  end= start+8;
-  let data=arr__data.splice(start,end);
-  console.log(data)
-    data.forEach((ele) => {
-        let div =document.createElement("div");
-        
-        let name =document.createElement("h3");
-        name.innerText=ele.name;
-        let image =document.createElement("img");
-        image.src=ele.img;
-        let Price =document.createElement("h5");
-        Price.innerText=ele.price;
-        let div1 =document.createElement("div");
-        AddTOCart = document.createElement("button");   
-        AddTOCart.innerText="Add to Cart"; 
-        PLUS = document.createElement("h1");   
-        PLUS.innerText="+";    
-        div1.append(AddTOCart,PLUS);
-        div.append(image,name,Price,div1);
-        container.append(div);
-    });
-}
-
-renderDom(0);
-
- let data=Math.ceil(arr__data.length/8);
- console.log(data);
-for(let i=0;i<=data;i++){
-    let btn=document.createElement("button");
-    btn.innerText=i+1;
-    container.append(btn);
-    btn.onclick=()=>{
-      show(i);
-    }
-}
-show=(i)=>{
-  renderDom(i);
-}
-
-
-
-
-</script>
+<script src="./script/grocery.js"> </script>
