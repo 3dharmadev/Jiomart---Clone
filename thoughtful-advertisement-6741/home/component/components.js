@@ -3,22 +3,22 @@ let navbar=()=>{
     <div id="kcnavbarhead">
     <!-- <img scr=""> -->
     <img src="https://www.jiomart.com/assets/version1662994539/smartweb/images/jiomart_logo_beta.svg">
-    <input type="text" id="kcsearch" placeholder="Search essentials, groceries, and more...">
+    <input type="text" id="kcsearch" placeholder=  "    Search essentials, groceries, and more...">
     <div id="kcnavbarusername">
-      <img src="https://www.rustbeltlegal.com/uploads/Business%20Type%20Icons/Erie%20Business%20Law%20icons_Sole-Proprietorship.png">
-      <p></p>
+      <img src="https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/profile.svg">
+      <p id="sig">Sign in / Sign up</p>
     </div>
 
     <div id="kccart">
-      <img src="https://th.bing.com/th/id/R.3c6701e58b2f09740563e9699b059f8c?rik=F2240ONFT3LuEA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_211129.png&ehk=kN7gJVrQjvRXgQaMdcOOW4BQkOEiSLiaTRjAu2Oakcc%3d&risl=&pid=ImgRaw&r=0">
+      <img src="https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/cart.svg">
       <h3>Cart</h3>
     </div>
+    
   </div>
   <!-- Navbar Menu -->
     <div id="menu">
         <div id="menu1">
           <ul id="main_menu">
-            
             <li class="main_list"><b>Groceries</b>
             <ul>
             <ol>
@@ -153,7 +153,7 @@ let navbar=()=>{
                     </ul>
                    </li>     
                   </div>
-          <!-- <div id="cart"><img src="https://th.bing.com/th/id/R.3c6701e58b2f09740563e9699b059f8c?rik=F2240ONFT3LuEA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_211129.png&ehk=kN7gJVrQjvRXgQaMdcOOW4BQkOEiSLiaTRjAu2Oakcc%3d&risl=&pid=ImgRaw&r=0">&nbsp;  MY CART &nbsp; <p></p></div> -->
+          
       </div>`
 }
 
