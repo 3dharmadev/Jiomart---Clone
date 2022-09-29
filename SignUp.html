@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/signUp.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <div>
+            <span class="material-icons menu">menu</span>
+        </div>
+        <div>
+            <div onclick="refresh()">JioMart</div>
+            <div>BETA</div>
+        </div>
+        <div><input id="searchItem" type="text" placeholder="Search essential, groceries, and more..."></div>
+        <div onclick="goTOsignIn()" class="signIn navinnerdiv navicon">
+            <span class="material-icons">perm_identity</span>
+            <div class="navText">Sign In / Sign Up</div>
+        </div>
+        <div onclick="goTocart()" class="cart navinnerdiv navicon">
+            <span class="material-icons">shopping_cart</span>
+            <div class="navText">Cart</div>
+        </div>
+    </div>
+    <div id="cont">
+        <div>
+            <img src="https://www.jiomart.com/msassets/images/login-banner.jpg" alt="">
+        </div>
+        <div id="checkSignUp">
+            <form action="" id="form" onsubmit="checkSignIn(event)">
+                <div class="signInText">Sign Up</div>
+                <div class="request">Please enter your details</div>
+                <input type="text" placeholder="Your First Name" id="firstName">
+                <input type="text" placeholder="Your Last Name" id="lastName">
+                <input type="email" placeholder="Enter your Email Id" id="emailId">
+                <input type="password" placeholder="Enter your Password" id="pwd">
+                <div id="msg">Use 8 or more characters with a mix of letters & numbers</div>
+                <input type="password" placeholder="Enter your Password" id="pwd2">
+                <input type="number" placeholder="Enter Your Mobile Number..." id="mob">
+                <div id="checkBox">
+                    <div>Enable order updates and important information on Whatsapp</div>
+                    <input type="checkbox">
+                </div>
+                <input type="submit" class="btn" value="Verify">
+            </form>
+        </div>
+    </div>
+  
+    <script src="../scripts/signUp.js"></script>
+</body>
+
+</html>
