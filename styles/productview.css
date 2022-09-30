@@ -1,0 +1,189 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+  }
+  .header {
+    height: 100px;
+    width: 100%;
+    background-color: black;
+  }
+  .container {
+    /* border: 2px solid black; */
+    width: 75%;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    margin-top: 20px;
+  }
+  .rightBox {
+    /* border: 2px solid red; */
+    width: 50%;
+    height: 600px;
+    padding: 0px 25px 0px 25px;
+  }
+  .leftBox {
+    /* border: 2px solid blue; */
+    width: 50%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+  }
+  .multiImg {
+    /* border: 2px solid blue; */
+    width: 20%;
+    height: 100%;
+    padding-right: 20px;
+    align-items: center;
+  }
+  .singleImg {
+    /* border: 2px solid blue; */
+    width: 80%;
+    height: 100%;
+  }
+  .company {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 25px;
+    /* margin-bottom: 5px; */
+  }
+  .singleImg img {
+    width: 100%;
+    height: auto;
+  }
+  .priceDiv {
+    display: flex;
+    margin-top: 5px;
+    font-size: 19px;
+  }
+  .size {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .sizeBox {
+    display: flex;
+  }
+  .sizeBox div {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    margin-top: 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 13px;
+    font-weight: 20;
+  }
+  .bagDiv {
+    display: flex;
+    margin-top: 30px;
+  }
+  .bagDiv div {
+    border: 2px solid #42a2a2;
+  }
+  .dummyP {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px 15px 0px;
+    /* line-height: 18px; */
+  }
+  .dummy {
+    font-size: 14px;
+    font-weight: 575;
+  }
+  .dummy > p {
+    font-weight: 800;
+  }
+  .memberOffer {
+    font-size: 13px;
+    color: rgb(40, 40, 40);
+  }
+  .name {
+    /* color: gray; */
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 2px;
+    color: gray;
+  }
+  .addToBag {
+    width: 300px;
+    color: white;
+    background-color: #42a2a2;
+  }
+  .bagDiv > div {
+    padding: 12px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .addToBag {
+    width: 85%;
+  }
+  .multiImg {
+    align-items: center;
+    padding-top: 30px;
+  }
+  .tax {
+    font-size: 11px;
+    color: gray;
+    margin-bottom: 13px;
+  }
+  .size > p:nth-child(2) {
+    color: #42a2a2;
+    text-decoration: underline;
+    font-size: 15px;
+  }
+  .imgOne,
+  .imgTwo,
+  .imgThree,
+  .imgFour {
+    width: 100%;
+    /* width: 20px; */
+    height: auto;
+    height: 125px;
+    /* border: 2px solid red; */
+    margin-bottom: 8px;
+  }
+  .subImage {
+    width: 100%;
+    height: auto;
+  }
+  .dummyP > p:nth-child(2) {
+    font-size: 20px;
+    font-weight: 900px;
+  }
+  .stikeOffPrice {
+    color: gray;
+    text-decoration: line-through;
+    /* padding-left: 10px; */
+  }
+  .rupeeLogo {
+    padding-left: 10px;
+  }
+  .discount {
+    color: red;
+    font-weight: 50;
+    padding-left: 10px;
+  }
+  .memberOfferDiv {
+    padding: 10px 0px 10px 0px;
+    display: flex;
+  }
+  .learn {
+    color: #42a2a2;
+    font-size: 10px;
+  }
+  .pageLocation {
+    margin-left: 180px;
+    margin-top: 20px;
+  }
+  .heart {
+    width: 40px;
+  }
+  
