@@ -1,7 +1,5 @@
 
 /* ___________________________-CSS FOR SLIDE-_____________________________ */
-
-
 #First_slid_sliderframe{
     height:97%;
     overflow: hidden;
@@ -94,28 +92,26 @@ animation: slide 12300ms infinite;
 
 /* POSTER */
 #kclowest{
-    border:1px solid green;
-    height: 150px;
+   
+    height: 200px;
     height:100%;
-    margin-top:6px;
     /* margin-bottom:6px; */
     
 }
 #kclowest>img{
     width:100%;
-    height:200px;
+    height:270px;
+    
 }
 #kctrends{
-    border:1px solid green;
-    height: 150px;
-    height:100%;
-    margin-top:6px;
-    height: 200px;
+    height:80%;
+   
    
 }
 #kctrends>img{
     width:100%;
-    height:200px;
+    height:280px;
+   
 }
 #kctopcat{
     display: flex;
@@ -129,75 +125,19 @@ animation: slide 12300ms infinite;
 #kcpuric>img{
     width: 100%;
 }
+#kclimited{
+   
+    height: 200px;
+    height:100%;
+  
+}
+#kclimited>img:nth-child(1){
+    width:100%;
+    
+}
+#kclimited>img:nth-child(2){
+    width:100%;
+   
+}
 /* End */
-/* Start daily essentials*/
-#kcdaily{
-    margin: auto;
-    height: 500px;
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 190px,190px;
-    gap: 20px;
-    /* background-color: aquamarine; */
-}
-#kcdaily>div{
-text-align: center;
-background-color:#EFD6DA;
-border-top: 10px solid rgb(243, 23, 23);
-border-radius: 10%;
-}
-#kcdaily>div>a>img:hover{
-    width: 50%;
-}
-.kcdis{
-    margin: auto;
-    height: 10%;
-    width: 55%;
-    background-color: rgb(243, 23, 23);
-    color: white;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-}
-#kcdaily>div>a>img{
-    width: 45%;
-}
-/* END daily essentials */
-/* ======================================================================== */
-/*START Shop by categories */
 
-
-/*END Shop by categories */
-/* ========================================================================= */
-/* START FOOD POSTER */
-#kcfood{
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
-}
-#kcfood>div>img{
-    width: 100%;
-}
-/* END FOOD POSTER */
-/* ========================================================================= */
-#kcbiscoot{
-    margin-top: 2%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
-}
-#kcbiscoot>div>img{
-    height: 100%;
-    width: 100%;
-}
-/* =============================================================================== */
-#kcheleats{
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
-}
-#kcheleats>div>img{
-    width: 100%;
-}
