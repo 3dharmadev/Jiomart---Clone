@@ -1,0 +1,149 @@
+#img{
+    width: 100%;
+    margin-top: 50px;
+}
+#container{
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-evenly;
+    gap: 50px;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+#container>div{
+ 
+    height: 300px;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    background-color: white;
+    
+   
+}
+#container>div>h5{
+    margin-top: 20px;
+}
+#container>div>.div1{
+    margin-top: 20px;
+}
+
+
+
+#container>div>div{
+    width: 60%;
+    height: 35px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    border: 0px;
+    background-color: #008ecc;
+    border-radius: 10px;
+    
+}
+#container>div>div>button{
+    background-color: #008ecc;
+    border: 0px;
+   font-size: medium;
+   
+   
+    margin-left: 6px;
+    color: white;
+}
+#container>div>div>h1{
+    margin-top: -3px;
+    margin-right: 10px;
+    color: white;
+}
+
+#sort{
+    display: flex;
+   justify-content: right;
+   gap: 25px;
+   margin-top: 20px;
+   margin-bottom: -25px;
+   
+}
+#sort>button{
+    border: 0px;
+    background-color: white;
+    border-radius: 1px;
+    height: 20px;
+}
+#filter1{
+     height: 20px;
+}
+body{
+    background-color: rgb(225, 233, 241);
+}
+#navbar{
+    background-color: #008ecc;
+}
+
+
+#main{
+    display: flex;
+    gap: 20px;
+}
+
+#sidebar{
+    width:25%;
+   margin-left: 10px;
+   margin-top: 50px;
+   
+}
+
+ #search{
+    width:250px;
+    height:20px;
+    margin-left: 20px;
+
+} 
+ #categories{
+    height: 300px;
+    overflow: scroll;
+    background-color: white ;
+    border:1px solid grey;
+ }
+  
+#categories>h2{
+    margin-left: 10px;
+  font-style: italic ;
+  color:grey;
+}
+#categories>h4{
+    margin-left: 10px;
+}
+
+
+   #filter  {
+        height: 300px;
+        overflow: scroll;
+        background-color: white ;
+        border:1px solid grey;
+      }
+
+#filter>h2{
+    margin-left: 10px;
+    font-style: italic ;
+    color:grey;
+}
+#filter>h4{
+    margin-left: 10px;
+}
+
+#bar2{
+    height: 5px;
+    width: 100%;
+    background-color: rgb(168, 168, 168);
+  }
+  #sidebar{
+     
+     margin-bottom:50px;
+  }
+  #kcnavbar{
+    margin-top: -140px;
+  }
+  body{
+    margin-top: -40px;
+  }

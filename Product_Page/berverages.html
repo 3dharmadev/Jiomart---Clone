@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="../navbar/navbar.css">
+<link rel="stylesheet" href="../sidebar/sidebar.css">
+<link rel="stylesheet" href="./css/advance.css">
+<link rel="stylesheet" href="../footer/footer.css">
+
+<body>
+    <div id="kcnavbar"></div>
+    <div id="sidebar">  </div>
+   <img id="img" src="https://www.jiomart.com/images/category/3/fashion-20200902.jpeg" alt="">
+   <div id="sort">
+    <select name="" onclick="filter()" id="filter1">
+        <option value="">Search Between</option>
+        <option value="50">50</option>
+        <option value="90">90</option>
+        <option value="150">150</option>
+    </select>
+    <button onclick="LTH()">Low to High</button>
+    <button onclick="HTL()">High to Low</button>
+ </div>
+    <div id="main">
+
+      <div id="sidebar">
+
+        <h2>Categories</h2>
+         <div id="categories">
+          
+           <h4>> Mobiles & Tablets</h4>
+           <h4>Fruits & Vegetables</h4>
+           <h4>Women</h4>
+           <h4>Staples</h4>
+           <h4>Snacks & Branded Foods</h4>
+           <h4>Beverage</h4>
+           <h4>Fregrance</h4>
+           <h4>Personal Care & Grooming</h4>
+           <h4>Personal Care</h4>
+           <h4>Home Care</h4>
+           <h4>Mom & Baby</h4>
+           <h4>Accessories</h4>
+           <h4>Home & Kitchen</h4>
+           <h4>Mom & Baby Care</h4>
+           <h4>Books</h4>
+           <h4>Pets</h4>
+         </div>
+
+         <h2>Filter</h2>
+            <h4>inStock Products</h4>
+            <input type="text" id="search" placeholder="Search">
+         <div id="filter">
+            <h2>Categories</h2>
+                <h4>Cups, Mugs, & More</h4>
+                <h4>Gardening</h4>
+                <h4>Herbal & Ayurvedic</h4>
+                <h4>Wall Decore</h4>
+                <h4>Cookwar & Non Stick</h4>
+                <h4> Interior Care</h4>
+                <h4>Home Decore Accents</h4>
+                <h2>Brand</h2>
+            <h4>Whata Your Kick</h4>
+            <h4>CAPMATE</h4>
+            <h4>Cuber Industries</h4>
+            <h4>Riara</h4>
+            <h4>Nirlon</h4>
+            <h4>Pranay</h4>
+            <h4>KALAPAMBH</h4>
+            <h4>Lushomes</h4>
+            <h4>Kraft Seeds</h4>
+            <h4>PETS EMPRE</h4>
+            <h4>JASPO</h4>
+            <h4>Trustbasket</h4>
+            <h4>JAAMSO ROYALS</h4>
+            <h4>RIDERSCART</h4>
+         </div>
+      </div>
+
+       <div id="container"></div>
+      </div> 
+    
+      <div id="footer"></div>
+   
+    </body>
+</html>
+ 
+
+
+ <script type="module">
+    import {navbar} from "../navbar/components.js";
+   document.getElementById("kcnavbar").innerHTML=navbar();
+   import {sidebar} from "../sidebar/sidebar.js";
+   document.getElementById("sidebar").innerHTML=sidebar();
+
+   import {footer} from "../footer/footer.js";
+   document.getElementById("footer").innerHTML=footer();
+
+   
+   </script>
+
+<script>
+   
+   let container=document.getElementById("container");
+
+ let arr__data=[
+{
+"image":"https://www.jiomart.com/images/product/150x150/491121060/coca-cola-1-75-l-product-images-o491121060-p491121060-0-202206022121.jpg",
+"selection1":"Coca Cola 1.75 L",
+"price":176
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490001992/brooke-bond-red-label-strong-blend-tea-1-kg-product-images-o490001992-p490001992-0-202208101817.jpg",
+"selection1":"Brooke Bond Red Label Strong Blend Tea 1 kg",
+"price":134
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490004178/tata-agni-tea-1-kg-product-images-o490004178-p490004178-0-202203170913.jpg",
+"selection1":"Tata Agni Tea 1 kg",
+"price":45
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490967439/brooke-bond-red-label-natural-care-tea-500-g-product-images-o490967439-p490967439-0-202208121842.jpg",
+"selection1":"Brooke Bond Red Label Natural Care Tea 500 g",
+"price":56
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/491187481/bournvita-750-g-product-images-o491187481-p491187481-0-202203150515.jpg",
+"selection1":"Bournvita 750 g",
+"price":61
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490001978/b-natural-litchi-juice-1-l-product-images-o490001978-p490001978-0-202203170223.jpg",
+"selection1":"B Natural Litchi Juice 1 L",
+"price":120
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490001341/tata-gold-leaf-tea-500-g-product-images-o490001341-p490001341-0-202203170442.jpg",
+"selection1":"Tata Gold Leaf Tea 500 g",
+"price":65
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490004180/tata-tea-premium-anokha-swad-chai-1-kg-product-images-o490004180-p490004180-0-202203171009.jpg",
+"selection1":"Tata Tea Premium Anokha Swad Chai 1 kg",
+"price":133
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490249967/b-natural-guava-gush-juice-1-l-product-images-o490249967-p490249967-0-202203151704.jpg",
+"selection1":"B Natural Guava Gush Juice 1 L",
+"price":262
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490249972/b-natural-apple-juice-1-l-product-images-o490249972-p490249972-0-202204262008.jpg",
+"selection1":"B Natural Apple Juice 1 L",
+"price":222
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/491053276/monster-energy-drink-350-ml-can-product-images-o491053276-p491053276-0-202203150515.jpg",
+"selection1":"Monster Energy Drink 350 ml",
+"price":2654
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490005092/red-bull-250-ml-pack-of-4-product-images-o490005092-p490005092-0-202203170802.jpg",
+"selection1":"Red Bull 250 ml (Pack of 4)",
+"price":2612
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/491086175/tropicano-slice-mango-drink-1-75-l-product-images-o491086175-p491086175-0-202207272007.jpg",
+"selection1":"Tropicano Slice Mango Drink 1.75 L",
+"price":263
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490001816/taj-mahal-tea-1-kg-product-images-o490001816-p490001816-0-202206061632.jpg",
+"selection1":"Taj Mahal Tea 1 kg",
+"price":262
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490425757/society-tea-1-kg-product-images-o490425757-p490425757-0-202203170556.jpg",
+"selection1":"Society Tea 1 kg",
+"price":226
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490004179/tata-agni-tea-250-g-product-images-o490004179-p490004179-0-202203150357.jpg",
+"selection1":"Tata Agni Tea 250 g",
+"price":26
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490967437/red-label-natural-care-tea-1-kg-product-images-o490967437-p490967437-0-202206022215.jpg",
+"selection1":"Red Label Natural Care Tea 1 kg",
+"price":86
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490073714/wagh-bakri-premium-leaf-tea-250-g-product-images-o490073714-p490073714-0-202203170618.jpg",
+"selection1":"Wagh Bakri Premium Leaf Tea 250 g",
+"price":45
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490005005/brooke-bond-taaza-leaf-tea-1-kg-product-images-o490005005-p490005005-0-202203170237.jpg",
+"selection1":"Brooke Bond Taaza Leaf Tea 1 kg",
+"price":76
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/491696361/bournvita-1-kg-product-images-o491696361-p590514178-0-202203150152.jpg",
+"selection1":"Bournvita 1 kg",
+"price":26
+}
+ ];
+
+
+let renderDom =(data) =>{
+ container.innerHTML="";
+ 
+   data.forEach((ele) => {
+       let div =document.createElement("div");
+
+       let div1 =document.createElement("div");
+       
+       let name =document.createElement("h4");
+       name.innerText=ele.selection1;
+       let Image =document.createElement("img");
+       Image.src=ele.image;
+       let Price =document.createElement("h5");
+       Price.innerText="Price - ₹"+ele.price;
+
+       div1.onclick=() =>{
+        ADDTOCART(ele);
+        }
+       
+     let  AddTOCart = document.createElement("button");   
+       AddTOCart.innerText="Add to Cart"; 
+       PLUS = document.createElement("h1");   
+       PLUS.innerText="+";    
+       
+       div1.append(AddTOCart,PLUS);
+       div.append(Image,name,Price,div1);
+       container.append(div);
+
+       
+   });
+}
+
+renderDom(arr__data);
+
+
+let LTH = () =>{
+ 
+ arr__data.sort(function(a,b){
+     return a.price-b.price;
+ });
+ 
+  
+ renderDom(arr__data);
+ 
+ }
+ 
+ let HTL = () =>{
+  
+ arr__data.sort(function(a,b){
+     return b.price-a.price;
+ });
+ renderDom(arr__data);
+ 
+ }
+ 
+ 
+ let filter = () =>{
+ 
+ let filteR= +document.getElementById("filter1").value ;
+ 
+ if(filteR===0){
+     renderDom(arr__data);
+     return;
+ }
+ let data=arr__data.filter((ele)=>{
+  return  ele.price<=filteR;
+ });
+ 
+ renderDom(data);
+ }
+ 
+ 
+ function openNav() {
+ document.getElementById("mySidebar").style.width = "340px";
+ document.getElementById("main").style.marginLeft = "250px";
+ }
+ 
+ function closeNav() {
+ document.getElementById("mySidebar").style.width = "0";
+ document.getElementById("main").style.marginLeft= "0";
+ }
+
+
+
+ let arr_cart = JSON.parse(localStorage.getItem("ProductItem")) || [];
+
+
+let ADDTOCART=(el)=>{
+    let isPresent=false;
+     arr_cart.forEach((ele)=>{
+      if(ele.image==el.image && ele.name==el.name){
+      //  console.log("exist",el.image);
+        isPresent=true;
+      }
+     });
+     if(isPresent==true){
+        return;
+     }
+     arr_cart.push(el);
+     //console.log(el);
+     localStorage.setItem("ProductItem",JSON.stringify(arr_cart));
+   
+}
+
+
+</script>
