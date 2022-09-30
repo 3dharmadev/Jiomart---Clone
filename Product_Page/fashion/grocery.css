@@ -1,0 +1,94 @@
+#img{
+    width: 100%;
+    margin-top: 200px;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-evenly;
+    gap: 10px;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+#container>div{
+ height: 400px;
+ 
+    border: 0.5px solid black;
+    border-radius: 10px;
+    background-color: white;
+  
+}
+
+#container>div>div{
+    width: 80%;
+    height: 40px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    border: 0px;
+    background-color: rgb(1, 179, 238);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+#container>div>div>button{
+    background-color:  rgb(1, 179, 238);
+    border: 0px;
+   font-size: medium;
+   font-weight: 400;
+   
+    margin-left: 6px;
+    color: white;
+}
+#container>div>div>h1{
+    margin-top: -6px;
+    margin-right: 10px;
+    color: white;
+}
+
+#sort{
+    display: flex;
+   justify-content: right;
+   gap: 50px;
+   margin-top: 20px;
+}
+#sort>button{
+    border: 0px;
+    background-color: white;
+    border-radius: 1px;
+}
+body{
+    background-color: rgb(225, 233, 241);
+}
+#main{
+    display:flex;
+    gap:10px;
+}
+#sidebar{
+    width:300px;
+    background-color: white;
+    border:1px solid grey;
+   margin-left: 10px;
+   margin-top: 50px;
+}
+#search{
+    width:250px;
+    height:30px;
+    margin-left: 20px;
+}
+#categories>h2{
+    margin-left: 10px;
+  font-style: italic ;
+  color:grey;
+}
+#categories>h4{
+    margin-left: 10px;
+}
+#filter>h2{
+    margin-left: 10px;
+    font-style: italic ;
+    color:grey;
+}
+#filter>h4{
+    margin-left: 10px;
+}
