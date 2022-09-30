@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="styles/productview.css">
+    <link rel="stylesheet" href="styles/preloader.css">
+    <link rel="stylesheet" href="./thoughtful-advertisement-6741/home/navbar.css">
+    
+    <script
+      src="https://kit.fontawesome.com/e9a5a74c45.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Product Page</title>
+    <link rel="icon"
+    href="https://www.jiomart.com/assets/smartweb/favicon.svg"
+    type="image/x-icon" />
+  </head>
+  <body>
+    <div id="kcnavbar"></div>
+    <div id="preloader"></div>
+    <p class="pageLocation">Product page</p>
+    <div class="container">
+      <div class="leftBox">
+        <div class="multiImg">
+          <div class="imgOne"></div>
+          <div class="imgTwo"></div>
+          <div class="imgThree"></div>
+          <div class="imgFour"></div>
+        </div>
+        <div class="singleImg"></div>
+      </div>
+      <div class="rightBox">
+        <h2 class="company">Jio-Mart</h2>
+        <p class="name"></p>
+        <div class="priceDiv">
+          <p class="rupeeLogo">₹</p>
+          <p class="price"></p>
+          <p class="rupeeLogo">₹</p>
+          <p class="stikeOffPrice"></p>
+          <p class="discount"></p>
+        </div>
+        <p class="tax">Inclusive of taxes</p>
+        <hr />
+        <div class="memberOfferDiv">
+          <p class="memberOffer">
+             Member get an extra discount of <b>20</b> and FREE shipping.
+          </p>
+          <p class="learn">Learn more</p>
+        </div>
+        <hr />
+        <div class="size">
+          <p>SELECT SIZE</p>
+          <p>Size Guide</p>
+        </div>
+        <div class="sizeBox">
+          <div>S</div>
+          <div><p>M</p></div>
+          <div><p>L</p></div>
+          <div><p>XL</p></div>
+          <div><p>2XL</p></div>
+          <div><p>3XL</p></div>
+        </div>
+        <div class="bagDiv">
+          <!-- heart -->
+          <div class="">
+            <!-- <i class="fa-thin fa-heart"></i> -->
+            <i class="fa fa-heart-o heart" aria-hidden="true"></i>
+          </div>
+          <div class="addToBag">ADD TO BAG</div>
+        </div>
+        <hr />
+        <div class="dummyP">
+          <p class="dummy">SAVE EXTRA WITH 4 OFFERS</p>
+          <p class="dummy">+</p>
+        </div>
+        <hr />
+        <div class="dummyP">
+          <p class="dummy">PRODUCT DESCRIPTION</p>
+          <p class="dummy">+</p>
+        </div>
+        <hr />
+        <div class="dummyP">
+          <p class="dummy">15 DAY RETURNS & EXCHANGE</p>
+          <p class="dummy">+</p>
+        </div>
+        <hr />
+        <div class="dummyP">
+          <p class="dummy">DELIVERY DETAILS</p>
+          <p class="dummy">+</p>
+        </div>
+        <hr />
+      </div>
+      <!-- <hr /> -->
+    </div>
+    <div id="footer"></div>
+    <script>
+      var Loader=document.getElementById("preloader")
+      window.addEventListener("load", function(){
+      preloader.style.display = "none";
+      })
+
+      
+     </script>
+  </body>
+</html>
+
+
+<script src="scripts/productview.js"></script>
+<script type="module">
+    import {footer} from './footer.js'
+    let footerDiv=document.getElementById("footer")
+    footerDiv.innerHTML=footer()
+    
+</script>
+<script type="module" src="../thoughtful-advertisement-6741/home/home.js">
+</script>
