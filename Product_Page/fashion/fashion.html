@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<link rel="stylesheet" href="./grocery.css">
+<body>
+
+   <img id="img" src="https://www.jiomart.com/images/category/3/fashion-20200902.jpeg" alt="">
+    <div id="sort">
+       <select name="" id="">
+           <option value="">Search Less Than</option>
+           <option value="100">Between 100</option>
+           <option value="300">Between 300</option>
+           <option value="500">Between 500</option>
+       </select>
+       <button>Low to High</button>
+       <button>High to Low</button>
+    </div>
+    <div id="main">
+      <div id="sidebar">
+         <div id="categories">
+           <h2>Categories</h2>
+           <h4>> Mobiles & Tablets</h4>
+           <h4>Fruits & Vegetables</h4>
+           <h4>Women</h4>
+           <h4>Staples</h4>
+           <h4>Snacks & Branded Foods</h4>
+           <h4>Beverage</h4>
+           <h4>Fregrance</h4>
+           <h4>Personal Care & Grooming</h4>
+           <h4>Personal Care</h4>
+           <h4>Home Care</h4>
+           <h4>Mom & Baby</h4>
+           <h4>Accessories</h4>
+           <h4>Home & Kitchen</h4>
+           <h4>Mom & Baby Care</h4>
+           <h4>Books</h4>
+           <h4>Pets</h4>
+         </div>
+         <div id="filter">
+            <h2>Filter</h2>
+            <h4>inStock Products</h4>
+            <h2>Categories</h2>
+            <input type="text" id="search" placeholder="Search">
+            <h4>Cups, Mugs, & More</h4>
+            <h4>Gardening</h4>
+            <h4>Herbal & Ayurvedic</h4>
+            <h4>Wall Decore</h4>
+            <h4>Cookwar & Non Stick</h4>
+            <h4> Interior Care</h4>
+            <h4>Home Decore Accents</h4>
+            <h2>Brand</h2>
+            <input type="text" id="search" placeholder="Search">
+            <h4>Whata Your Kick</h4>
+            <h4>CAPMATE</h4>
+            <h4>Cuber Industries</h4>
+            <h4>Riara</h4>
+            <h4>Nirlon</h4>
+            <h4>Pranay</h4>
+            <h4>KALAPAMBH</h4>
+            <h4>Lushomes</h4>
+            <h4>Kraft Seeds</h4>
+            <h4>PETS EMPRE</h4>
+            <h4>JASPO</h4>
+            <h4>Trustbasket</h4>
+            <h4>JAAMSO ROYALS</h4>
+            <h4>RIDERSCART</h4>
+         </div>
+      </div>
+       <div id="container"></div>
+      </div> 
+    
+   
+</body>
+</html>
+<script > </script>
+
+<script>
+   
+   let container=document.getElementById("container");
+
+ let arr__data=[
+   {name:"Radster shoes",price:"₹1199",img:"https://rukminim1.flixcart.com/image/150/150/ku79vgw0/shoe/c/s/9/9-em202013b-roadster-white-original-imag7dw8cstumjkf.jpeg?q=70"},
+   {name:"Hotstyle grey casual shoe",price:"₹275",img:"https://rukminim1.flixcart.com/image/150/150/xif0q/shoe/w/w/f/-original-imaghvbadnnazvtz.jpeg?q=70"},
+   {name:"Earrings",price:"₹99",img:"https://rukminim1.flixcart.com/image/150/150/kwcfngw0/earring/v/v/w/na-mf-apl-d3red-ashapriya-original-imag7j48eyyggahf.jpeg?q=70"},
+   {name:"Roadstar casual shirt",price:"₹549" ,img:"https://rukminim1.flixcart.com/image/150/150/xif0q/shirt/w/a/5/40-2444702-mast-harbour-original-imafm32sgqnynywc-bb.jpeg?q=70"},
+   {name:"Butterfly curve Stainless Steel Pressure Cooker",price:"₹1899" ,img:"https://www.jiomart.com/images/product/150x150/591001096/butterfly-curve-stainless-steel-pressure-cooker-5-l-0-20220113.jpg"},
+
+   {name:"Asian Mini Meal Blue Lunch Box",price:"₹109" ,img:"https://www.jiomart.com/images/product/150x150/490225642/asian-mini-meal-blue-round-insulated-2-container-lunch-box-350-ml-product-images-o490225642-p590085180-0-202203141956.jpg"},
+
+   {name:"Polyset Twisty Plastic Container Set",price:"₹249" ,img:"https://www.jiomart.com/images/product/150x150/491698092/polyset-twisty-threaded-pink-plastic-container-set-9-pcs-product-images-o491698092-p491698092-0-202207081756.jpg"},
+
+  
+
+
+   {name:"Home One Pink Plastic Masala Box",price:"₹99" ,img:"https://www.jiomart.com/images/product/150x150/491934157/home-one-pink-plastic-masala-box-product-images-o491934157-p590048984-0-202205180445.jpg"},
+   {name:"Coconut Stainless Steel Idly Cooker",price:"₹2700",img:"https://www.jiomart.com/images/product/150x150/590927754/coconut-stainless-steel-idly-cooker-with-6-plates-2-5-l-0-20220502.jpg"},
+   {name:"Everest Plastic Mesh Strainer",price:"₹19",img:"https://www.jiomart.com/images/product/150x150/491377749/everest-plastic-mesh-strainer-product-images-o491377749-p491377749-0-202206281535.jpg"},
+   {name:"Home One Easy Printes Plastic Container",price:"₹129",img:"https://www.jiomart.com/images/product/150x150/491934152/home-one-easytwist-brown-printed-plastic-container-1-5-l-set-of-3-product-images-o491934152-p590048979-0-202207081300.jpg"},
+   {name:"Asian Dynamic Plastic Food Container",price:"₹109" ,img:"https://www.jiomart.com/images/product/150x150/491458348/asian-dynamic-air-seal-multicolour-plastic-food-container-600-ml-set-of-3-product-images-o491458348-p491458348-0-202204261842.jpg"},
+   {name:"Polyset Lock Plastic Container",price:"₹79" ,img:"https://www.jiomart.com/images/product/150x150/491379328/polyset-lock-it-rectangular-plastic-container-175-ml-set-of-2-product-images-o491379328-p590115973-0-202207081259.jpg"},
+
+   {name:"Home One Duo Plastic Container",price:"₹129" ,img:"https://www.jiomart.com/images/product/150x150/491934164/home-one-duo-red-plastic-steel-container-300-ml-set-of-2-product-images-o491934164-p590041306-0-202207081806.jpg"},
+
+   {name:"Home One Printed Plastic Container",price:"₹129" ,img:"https://www.jiomart.com/images/product/150x150/491934153/home-one-easytwist-blue-printed-plastic-container-1-5-l-set-of-3-product-images-o491934153-p590048980-0-202207081807.jpg"},
+
+  
+   {name:"Home One Stainless Steel Loose Tiffin",price:"₹199" ,img:"https://www.jiomart.com/images/product/150x150/491901726/home-one-deluxe-stainless-steel-loose-tiffin-7x3-product-images-o491901726-p590309477-0-202203281302.jpg"}
+ ];
+
+
+let renderDom =(index) =>{
+ container.innerHTML="";
+
+ let start = index*8;
+ end= start+8;
+ let data=arr__data.splice(start,end);
+ console.log(data)
+   data.forEach((ele) => {
+       let div =document.createElement("div");
+       
+       let name =document.createElement("h3");
+       name.innerText=ele.name;
+       let image =document.createElement("img");
+       image.src=ele.img;
+       let Price =document.createElement("h5");
+       Price.innerText=ele.price;
+       let div1 =document.createElement("div");
+       AddTOCart = document.createElement("button");   
+       AddTOCart.innerText="Add to Cart"; 
+       PLUS = document.createElement("h1");   
+       PLUS.innerText="+";    
+       div1.append(AddTOCart,PLUS);
+       div.append(image,name,Price,div1);
+       container.append(div);
+   });
+}
+
+renderDom(0);
+
+let data=Math.ceil(arr__data.length/8);
+console.log(data);
+for(let i=0;i<=data;i++){
+   let btn=document.createElement("button");
+   btn.innerText=i+1;
+   container.append(btn);
+   btn.onclick=()=>{
+     show(i);
+   }
+}
+show=(i)=>{
+ renderDom(i);
+}
+
+
+
+
+</script>
