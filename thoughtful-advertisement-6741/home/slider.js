@@ -1,4 +1,5 @@
-let span = document.getElementsByTagName('span');
+let span = document.getElementsByClassName('slider1');
+let span1 = document.getElementsByClassName('slider2');
 	let product = document.getElementsByClassName('product')
 	let product_page = Math.ceil(product.length/4);
 	let l = 0;
@@ -33,3 +34,5 @@ let span = document.getElementsByTagName('span');
 	}
 	span[1].onclick = ()=>{right_mover();}
 	span[0].onclick = ()=>{left_mover();}
+
+	
