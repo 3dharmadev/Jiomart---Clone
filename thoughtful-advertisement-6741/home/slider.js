@@ -35,5 +35,4 @@ let span1 = document.getElementsByClassName('slider2');
 	span[1].onclick = ()=>{right_mover();}
 	span[0].onclick = ()=>{left_mover();}
 
-	span1[1].onclick = ()=>{right_mover();}
-	span1[0].onclick = ()=>{left_mover();}
+	
