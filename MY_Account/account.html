@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PAN Card Page</title>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/account.css">
 </head>
 <body>
-    <!-- https://techsadesign.com/wp-content/uploads/2021/02/Group-2-1-1-768x875.png -->
-    <div id="navbar"></div>
-    <h1>My Account</h1>
+    
+    <div id="kcnavbar"></div>
+    <h2 style="margin-left: 8%; font-family:JioBold;">My Account</h2> 
     <div id="kcmaininfo">
         <div id="kcprofile">
             <div id="kcprofilehead">
@@ -19,14 +19,13 @@
                     <img src="https://techsadesign.com/wp-content/uploads/2021/02/Group-2-1-1-768x875.png">
                 </div>
                 <div id="kcproinfo"> 
-                    <h5 class="kcname">KUNAL CHITATWAR</h5>
-                    <p class="kcemail">kunals14chitatwar@gmail.com</p>
-                    <p class="kcmobile">+91-8855817025</p>
+                    <h5 class="kcname"></h5>
+                    <p class="kcemail"></p>
+                    <p class="kcmobile"></p>
                 </div>
             </div>
             <div id="kcpay">
                 <div class="kcpay1">
-                    <!-- <img src="https://cdn2.iconfinder.com/data/icons/payment-filled/1024/card_verify-512.png"> -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="kcpaymentlogo" class="bi bi-credit-card-2-back" viewBox="0 0 16 16">
                         <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1z"/>
                         <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1z"/>
@@ -34,7 +33,6 @@
                     <p>Payment Methods</p>
                 </div>
                 <div class="kcpay1">
-                    <!-- <img src="https://cdn.onlinewebfonts.com/svg/img_395493.png"> -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="kcpaymentlogo1" class="bi bi-pencil-square" viewBox="0 0 16 16">
                         <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                         <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
@@ -59,19 +57,19 @@
             <div id="kcfullnamediv">
                 <div class="kcAinfo">
                     <p class="kcAinfo_p">Full Name</p>
-                    <h4 id="kcname">----'----</h4>
+                    <h4 class="kcname">----'----</h4>
                 </div>
                 <div class="kcAinfo">
                     <p class="kcAinfo_p">AGE</p>
-                    <h4 id="kcage">----'----</h4>
+                    <h4 class="kcage">----'----</h4>
                 </div>
                 <div class="kcAinfo">
                     <p class="kcAinfo_p">Email id</p>
-                    <h4 id="kcemail">----'----</h4>
+                    <h4 class="kcemail">----'----</h4>
                 </div>
                 <div class="kcAinfo">
                     <p class="kcAinfo_p">Mobile Number</p>
-                    <h4 id="kcmobile">----'----</h4>
+                    <h4 class="kcmobile">----'----</h4>
                     <p class="kcAinfo_p">Defalut Address</p>
                 </div>
 
@@ -81,12 +79,12 @@
 <!--==============================================================================  -->
 <div id="kcmenudiv">
     <button id="kcmylist">My List</button>
-    <button>WishList</button>
+    <button onclick="addWishList()">WishList</button>
     <button onclick="addPAN()">PAN Card InforMation</button>
-    <button>Legal Information</button>
+    <button onclick="Legal()">Legal Information</button>
     <button>Need Help</button>
-    <button>Contact us</button>
-    <button id="kcLogout">Logout</button>
+    <button onclick="Contact()">Contact us</button>
+    <button onclick="kcLogout()" id="kcLogout">Logout</button>
 </div>
 <!-- ========================================================== -->
 <div id="kcaccount">
