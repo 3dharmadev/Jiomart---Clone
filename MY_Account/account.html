@@ -7,9 +7,11 @@
     <title>PAN Card Page</title>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/account.css">
+    <link rel="stylesheet" href="../home/sidebar.css">
+    <link rel="stylesheet" href="../home/navbar.css">
 </head>
 <body>
-    
+     <div id="sidebar"></div>
     <div id="kcnavbar"></div>
     <h2 style="margin-left: 8%; font-family:JioBold;">My Account</h2> 
     <div id="kcmaininfo">
@@ -94,4 +96,63 @@
 </div>
 </body>
 </html>
-<script src="./scripts/account.js"></script>
+ 
+<script   type="module">
+    import {navbar} from '../home/component/components.js'
+document.getElementById('kcnavbar').innerHTML=navbar();
+
+import {sidebar} from '../home/component/sidebar.js'
+document.getElementById('sidebar').innerHTML=sidebar();
+</script>
+
+
+    <script>
+
+let Name=document.querySelector(".kcname");
+let Age=document.querySelector("kcage");
+let Email=document.querySelector("kcemail");
+let Mobile=document.querySelector("kcmobile");
+
+let data=JSON.parse(localStorage.getItem("signedUser"));
+
+// data.forEach((el)=>{
+//     Name=`${el.Name} ${el.lastName}`;
+//     Age=el.age;
+//     Email=el.Mail;
+//     Mobile=el.Mobile;
+// })
+let addWishList=()=>{
+    window.location.href="wishlist.html"
+}
+
+let addPAN=()=>{
+    window.location.href="pancard.html"
+}
+
+let Legal=()=>{
+    window.location.href="legalinfo.html"
+}
+
+let Contact=()=>{
+    window.location.href="contact.html"
+}
+
+let kcLogout=()=>{
+    Name.innerHTML=null;
+    Age.innerHTML=null;
+    Email.innerHTML=null;
+    Mobile.innerHTML=null;
+}
+
+function openNav() {
+    document.getElementById("mySidebar").style.width = "340px";
+    document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    }
+</script>
+
+ 

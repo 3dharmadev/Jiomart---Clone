@@ -1,3 +1,10 @@
+import {navbar} from '../home/component/navbar.js'
+document.getElementById('kcnavbar').innerHTML=navbar();
+
+import {sidebar} from '../home/component/sidebar.js'
+document.getElementById('sidebar').innerHTML=sidebar();
+
+
 let Name=document.querySelector(".kcname");
 let Age=document.querySelector("kcage");
 let Email=document.querySelector("kcemail");
