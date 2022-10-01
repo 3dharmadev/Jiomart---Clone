@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+<link rel="stylesheet" href="../styles/cart.css">
+<link rel="stylesheet" href="styles/preloader.css">
+<link rel="stylesheet" href="../thoughtful-advertisement-6741/thoughtful-advertisement-6741/home/navbar.css">
+<link rel="icon"
+href="https://www.jiomart.com/assets/smartweb/favicon.svg"
+type="image/x-icon" />
+</head>
+<body>
+    <div id="kcnavbar"></div>
+  <!-- <div id="navbar">
+    <div onclick="refresh()">
+        <div>JioMart</div>
+        <div>BETA</div>
+    </div>
+</div> -->
+  
+    <div id="headingCart">My Cart</div>
+    <div id="emptyCart">
+        <div><img src="https://www.jiomart.com/msassets/images/emptycart.svg" alt=""></div>
+        <h5>Your Cart is empty!</h5>
+        <button onclick="addPro()">Add Products</button>
+    </div>
+    <div id="userProCont">
+      <div id="top">
+      </div>
+      <div id ="bot">
+        <h5 id="coupon">Apply Coupon</h5>
+        <input type="text" placeholder="Add Code Here" id="couponCode">
+        <button onclick="checkCoupon()">Click Here to Apply Code</button>
+        <h3 id="payment">Payment Details</h3>
+        <div>MRP TOTAL: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="pRc"></span></div>
+        <div>Product Discount <span id="dSc"></span></div>
+        <div>Total Amount: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id= tA></span></div>
+        <input type="number" placeholder="Enter Your Number Here" id="verifyNumber">
+        <button onclick="placeOrder()">Place Order</button>
+      </div>
+    </div>
+    
+    
+  <script src="../scripts/cart.js"></script>
+  <script type="module">
+    import {navbar} from '../thoughtful-advertisement-6741/thoughtful-advertisement-6741/home/scripts/home.js'
+document.getElementById('kcnavbar').innerHTML=navbar();
+  </script>
+ 
+</body>
+</html>
+ 
