@@ -1,0 +1,20 @@
+a{
+    color: #008ECC;
+}
+#kclegalbody{
+    margin: auto;
+    width: 90%;
+}
+#kclegalbody>p{
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(68, 67, 67);
+}
+#kclegalbody>h4{
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#kclegalbody>h2{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
