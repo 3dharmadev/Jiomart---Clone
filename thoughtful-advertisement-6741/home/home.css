@@ -141,3 +141,31 @@ animation: slide 12300ms infinite;
 }
 /* End */
 
+#Access{
+ width:98%;
+ height:240px;
+ 
+ margin:auto;
+
+ margin-top: 10px;
+ display:flex ;
+ gap:6px;
+}
+#smartd>h1{
+    margin-left: 46px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 27px;
+}
+#Access>div{
+    width:200px;
+    height:100%;
+   
+    border-radius: 12px;
+    margin-left:20px;
+}
+#Access>div>img{
+    width:95%;
+}
+#Access>div>img:hover{
+    width:99%
+}
