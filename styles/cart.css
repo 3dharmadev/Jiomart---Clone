@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+    background: #f6f6f7;
+}
+#navbar {
+    cursor: pointer;
+    align-items: center;
+    background-color: #008ECC;
+    color: white;
+    padding: 13px;
+}
+#navbar>div:nth-child(1)>div:nth-child(1) {
+    font-size: 30px;
+    margin-left: 28px;
+    font-family: 'Roboto', sans-serif;
+}
+#navbar>div:nth-child(1)>div:nth-child(2) {
+    font-size: 10px;
+    margin-left: 98px;
+    font-weight: 800;
+}
+#headingCart{
+    max-width:900px;
+    padding: 16px 0 16px 24px;
+    height: fit-content;
+    margin: auto;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+#emptyCart{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin: auto;
+    height: auto;
+}
+#emptyCart >div,button,h5{
+  width: 200px;
+  margin: auto;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+#emptyCart div{
+  margin-top: 100px;
+}
+#emptyCart button{
+  background: #007bff;
+  border: none;
+  border-radius: 3px;
+  height: 32px;
+  width: 250px;
+  color: white;
+}
+#userProCont{
+  display: grid;
+  margin: auto;
+  max-width: 1200px;
+  grid-template-columns: 50% 50%;
+  margin-top: 30px;
+  height: auto;
+}
+#userProCont div{
+  margin: 2%;
+}
+#userProCont> div:nth-child(1){
+  display: flex;
+  flex-direction: column;
+}
+
+#userProCont> div:nth-child(1)>div>img{
+   height: 100%;
+   width: 25%;
+}
+#userProCont> div:nth-child(1)>div>div{
+   height: auto;
+   width: auto;
+}
+#top{
+  background: #f6f6f7;
+}
+#top>div{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 5px;
+  background: #fff;
+  color: navy;
+  font-size: large;
+  font-weight: 400;
+  border: lightseagreen;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#userProCont div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+}
+#userProCont div:nth-child(2) button{
+  margin-top: 20px;
+}
+#payment{
+  margin: 50px 20px 20px 20px;
+}
+#coupon{
+  margin-top: 0;
+}
+#bot>button{
+  color: white;
+  border-radius: 10px;
+  background: #008ECC;
+  padding: 5px;
+  height: 30px;
+  border: none;
+}
+
+#bot>div{
+  background: #fff;
+  padding: 10px;
+  color: black;
+  font-size: small;
+  font-weight: bold;
+}
+#bot input{
+    margin: 10px 0 10px 0;
+    border: 1px solid rgb(236, 236, 236);
+    height: 30px;
+}
+.rigthPrice{
+  color: purple;
+  font-size: large;
+}
+.offer{
+  font-size: x-large;
+  color: green;
+}
+#top>div:nth-child(2){
+  display: flex;
+  flex-direction: row;
+}
+#bot{
+ background: white;
+}
