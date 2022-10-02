@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
@@ -7,8 +7,8 @@
    <title>Document</title>
 </head>
  
- <link rel="stylesheet" href="../navbar/navbar.css">
- <link rel="stylesheet" href="../sidebar/sidebar.css">
+<link rel="stylesheet" href="../home/navbar.css">
+ <link rel="stylesheet" href="../home/sidebar.css">
 <link rel="stylesheet" href="./css/advance.css">
 <link rel="stylesheet" href="../footer/footer.css">
 
@@ -92,14 +92,14 @@
   
 
 <script type="module">
-    import {navbar} from "../navbar/components.js";
+    import {navbar} from "../home/component/components.js";
    document.getElementById("kcnavbar").innerHTML=navbar();
-   import {sidebar} from "../sidebar/sidebar.js";
+   import {sidebar} from "../home/component/sidebar.js";
    document.getElementById("sidebar").innerHTML=sidebar();
-
+  
    import {footer} from "../footer/footer.js";
    document.getElementById("footer").innerHTML=footer();
-
+  
    
    </script>
 
@@ -185,6 +185,10 @@ container.innerHTML="";
         name.id="name";
         let image =document.createElement("img");
         image.src=ele.image;
+        image.onclick = () =>{
+          Redirect(ele);
+        }
+
         let Price =document.createElement("h5");
         Price.innerText="Price Rs- "+ ele.price;
         Price.id="price";
@@ -228,6 +232,19 @@ let ADDTOCART=(el)=>{
    
 }
 
+
+
+let arr_one =  JSON.parse(localStorage.getItem("ProductDetails")) || [];
+
+let Redirect =(ele) =>{
+
+   arr_one=[];
+   arr_one.push(ele);
+
+   localStorage.setItem("ProductDetails",JSON.stringify(arr_one));
+   window.location.href="productview.html";
+
+}
 
 
 let LTH = () =>{
