@@ -1,6 +1,6 @@
 
   // getting the item from local storage
-  var item = JSON.parse(localStorage.getItem("productItem"));
+  var item = JSON.parse(localStorage.getItem("ProductDetails"));
   // console.log(item);
 
   // displaying the element of the item
