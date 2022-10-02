@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+ 
+<link rel="stylesheet" href="../home/navbar.css">
+ <link rel="stylesheet" href="../home/sidebar.css">
+<link rel="stylesheet" href="./css/advance.css">
+<link rel="stylesheet" href="../footer/footer.css">
+
+<body>
+    <div id="sidebar"></div>
+    <div id="kcnavbar"> </div>
+    
+   <img id="img" src="https://www.jiomart.com/images/category/3/fashion-20200902.jpeg" alt="">
+   <div id="sort">
+    <select name="" onclick="filter()" id="filter1">
+        <option value="">Search Between</option>
+        <option value="50">50</option>
+        <option value="90">90</option>
+        <option value="150">150</option>
+    </select>
+    <button onclick="LTH()">Low to High</button>
+    <button onclick="HTL()">High to Low</button>
+ </div>
+    <div id="main">
+
+      <div id="sidebar">
+
+        <h2>Categories</h2>
+         <div id="categories">
+          
+           <h4>> Mobiles & Tablets</h4>
+           <h4>Fruits & Vegetables</h4>
+           <h4>Women</h4>
+           <h4>Staples</h4>
+           <h4>Snacks & Branded Foods</h4>
+           <h4>Beverage</h4>
+           <h4>Fregrance</h4>
+           <h4>Personal Care & Grooming</h4>
+           <h4>Personal Care</h4>
+           <h4>Home Care</h4>
+           <h4>Mom & Baby</h4>
+           <h4>Accessories</h4>
+           <h4>Home & Kitchen</h4>
+           <h4>Mom & Baby Care</h4>
+           <h4>Books</h4>
+           <h4>Pets</h4>
+         </div>
+
+         <h2>Filter</h2>
+            <h4>inStock Products</h4>
+            <input type="text" id="search" placeholder="Search">
+         <div id="filter">
+            <h2>Categories</h2>
+                <h4>Cups, Mugs, & More</h4>
+                <h4>Gardening</h4>
+                <h4>Herbal & Ayurvedic</h4>
+                <h4>Wall Decore</h4>
+                <h4>Cookwar & Non Stick</h4>
+                <h4> Interior Care</h4>
+                <h4>Home Decore Accents</h4>
+                <h2>Brand</h2>
+            <h4>Whata Your Kick</h4>
+            <h4>CAPMATE</h4>
+            <h4>Cuber Industries</h4>
+            <h4>Riara</h4>
+            <h4>Nirlon</h4>
+            <h4>Pranay</h4>
+            <h4>KALAPAMBH</h4>
+            <h4>Lushomes</h4>
+            <h4>Kraft Seeds</h4>
+            <h4>PETS EMPRE</h4>
+            <h4>JASPO</h4>
+            <h4>Trustbasket</h4>
+            <h4>JAAMSO ROYALS</h4>
+            <h4>RIDERSCART</h4>
+         </div>
+      </div>
+
+       <div id="container"></div>
+      </div> 
+    
+      <div id="footer"></div>
+   
+    </body>
+</html>
+  
+
+
+<script type="module">
+  import {navbar} from "../home/component/components.js";
+ document.getElementById("kcnavbar").innerHTML=navbar();
+ import {sidebar} from "../home/component/sidebar.js";
+ document.getElementById("sidebar").innerHTML=sidebar();
+
+ import {footer} from "../footer/footer.js";
+ document.getElementById("footer").innerHTML=footer();
+
+ 
+ </script>
+
+<script > 
+let container=document.getElementById("container");
+
+let arr__data=   [
+{
+"image":"https://www.jiomart.com/images/product/150x150/492336474/home-one-blue-plastic-foldable-table-63x36-5x24-cm-product-images-o492336474-p590945287-0-202205172325.jpg",
+"name":"Home One Blue Plastic Foldable Table 63x36.5x24 cm",
+"price":"₹ 499.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/492336473/home-one-pink-plastic-foldable-table-63x36-5x24-cm-product-images-o492336473-p590945286-0-202205172325.jpg",
+"name":"Home One Pink Plastic Foldable Table 63x36.5x24 cm",
+"price":"₹ 499.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/492336475/home-one-ivory-plastic-foldable-table-63x36-5x24-cm-product-images-o492336475-p590945288-0-202205172325.jpg",
+"name":"Home One Ivory Plastic Foldable Table 63x36.5x24 cm",
+"price":"₹ 499.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/491361364/polyset-optima-blue-polypropylene-stool-29-cm-product-images-o491361364-p491361364-0-202203170336.jpg",
+"name":"Polyset Optima Blue Polypropylene Stool 29 cm",
+"price":"₹ 249.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490762315/joyo-comfort-assorted-plastic-patla-14-cm-product-images-o490762315-p490762315-0-202203150841.jpg",
+"name":"Joyo Comfort Assorted Plastic Patla 14 cm",
+"price":"₹ 149.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/491361365/polyset-optima-baby-pink-plastic-stool-48-cm-product-images-o491361365-p491361365-0-202203150322.jpg",
+"name":"Polyset Optima Baby Pink Plastic Stool 48 cm",
+"price":"₹ 399.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490021590/ruchi-cozy-orange-round-patla-product-images-o490021590-p490021590-0-202203151523.jpg",
+"name":"Ruchi Cozy Orange Round Patla",
+"price":"₹ 199.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/491417154/asian-recto-plastic-assorted-stool-26-cm-product-images-o491417154-p591013564-0-202205172325.jpg",
+"name":"Asian Recto Assorted Colour Plastic Stool 37x26x36 cm",
+"price":"₹ 229.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/491456761/cello-roman-grey-and-orange-round-plastic-stool-21-cm-small-product-images-o491456761-p590108380-0-202203171039.jpg",
+"name":"Cello Roman Grey and Orange Round Plastic Stool 21 cm (Small)",
+"price":"₹ 201.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/rv094pigrz/mbtc-mavic-wrought-iron-folding-study-chair-with-cushion-adjustable-writing-pad-product-images-orv094pigrz-p590830183-0-202110221529.jpg",
+"name":"MBTC Mavic Wrought Iron Folding Study Chair with Cushion & Adjustable Writing Pad",
+"price":"₹ 2,399.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/rv6pbr9fsp/leadder-kitchenware-new-multipurpose-portable-150-kg-capacity-folding-stool-12-inch-height-product-images-orv6pbr9fsp-p590991663-0-202201082017.jpg",
+"name":"Leadder Kitchenware New Multipurpose Portable 150 kg Capacity Folding Stool (12 Inch Height)",
+"price":"₹ 349.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/rvcjzdojk0/faverito-new-plastic-folding-stool-brown-white-7-inch-portable-stool-150-kg-capacity-product-images-orvcjzdojk0-p590990384-0-202201071848.jpg",
+"name":"Faverito New Plastic Folding Stool Brown & White 7 Inch Portable Stool (150 kg Capacity)",
+"price":"₹ 299.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/rvrf1yjkky/pumpum-grey-cotton-single-bed-mattress-72-inch-x-36-inch-product-images-orvrf1yjkky-p590948199-0-202112152107.jpg",
+"name":"PumPum Grey Cotton Single Bed Mattress 72 inch x 36 inch",
+"price":"₹ 399.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/rvzcuyf7xf/essential-world-alloy-steel-folding-chair-purple-product-images-orvzcuyf7xf-p592350085-0-202207041611.jpg",
+"name":"Essential World Alloy Steel Folding Chair (Purple)",
+"price":"₹ 1,119.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/rvvc4m4qxk/curio-centre-white-round-cotton-swing-chair-with-accessories-for-indoor-outdoor-145-cmx57-cmx43-cm-product-images-orvvc4m4qxk-p590800764-0-202109211941.png",
+"name":"Curio Centre White Round Cotton Swing Chair with S Hooks & Rod 145 x 57 x 43 cm",
+"price":"₹ 849.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/rvyugvrjvi/pumpum-single-bed-3-fold-epe-foam-mattress-72-inch-x-36-inch-product-images-orvyugvrjvi-p590948198-0-202112152107.jpg",
+"name":"PumPum Single Bed 3 Fold Epe Foam Mattress 72 inch x 36 inch",
+"price":"₹ 575.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/rvaf0xwluu/royaldeals-portable-retractable-folding-stool-collapsible-telescoping-lightweight-simple-stools-for-adults-camping-fishing-travel-hunting-outdoor-indoor-multicolour-product-images-orvaf0xwluu-p590985203-0-202201050959.jpg",
+"name":"Royaldeals Portable Retractable Folding Stool, Collapsible Telescoping Lightweight Simple Stools for Adults Camping Fishing Travel Hunting Outdoor Indoor,Multicolour",
+"price":"₹ 759.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/rv0u7nvz31/story-home-multipurpose-black-gold-foldable-adjustable-portable-wooden-laptop-table-60-x-30-x-40cm-product-images-orv0u7nvz31-p590854825-0-202111112019.jpg",
+"name":"Story@Home Multipurpose Black & Gold Foldable Adjustable Portable Wooden Laptop Table 60 X 30 X 40cm",
+"price":"₹ 549.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/rvxjds4wvv/nilkamal-freedom-mini-09-rust-and-weathered-brown-plastic-shoe-cabinet-63-5-x-59-5-x-37-cm-product-images-orvxjds4wvv-p590985745-0-202201051505.jpg",
+"name":"Nilkamal Freedom Mini 09 Rust and Weathered Brown Plastic Shoe Cabinet 63.5 x 59.5 x 37 cm",
+"price":"₹ 2,720.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/rvzaxuubx6/esquire-delta-plastic-glossy-trolley-coffee-table-brown-product-images-orvzaxuubx6-p590985091-0-202201050902.jpg",
+"name":"Esquire Delta Plastic Glossy Trolley/Coffee Table -Brown",
+"price":"₹ 689.00"
+}
+];
+
+
+let renderDom =(data) =>{
+container.innerHTML="";
+       
+    data.forEach((ele) => {
+        let div =document.createElement("div");     
+        let name =document.createElement("h4");
+        let N=ele.name;
+        Name= N.slice(0,55);
+        console.log(Name);
+        name.innerText=Name;
+        name.id="name";
+        let image =document.createElement("img");
+        image.src=ele.image;
+        let Price =document.createElement("h5");
+        Price.innerText="Price Rs- "+ ele.price;
+        Price.id="price";
+        let div1 =document.createElement("div");
+        AddTOCart = document.createElement("button");   
+        AddTOCart.innerText="Add to Cart"; 
+        PLUS = document.createElement("h1");   
+        PLUS.innerText="+";    
+        div1.append(AddTOCart,PLUS);
+        div1.id="div1";
+        div1.onclick=() =>{
+         AddToCart(ele);
+        }
+        div1.onclick=() =>{
+            ADDTOCART(ele);
+        }
+        div.append(image,name,Price,div1);
+        container.append(div);
+    });
+}
+renderDom(arr__data);
+
+
+let arr_cart = JSON.parse(localStorage.getItem("ProductItem")) || [];
+
+
+let ADDTOCART=(el)=>{
+    let isPresent=false;
+     arr_cart.forEach((ele)=>{
+      if(ele.image==el.image && ele.name==el.name){
+       
+        isPresent=true;
+      }
+     });
+     if(isPresent==true){
+        return;
+     }
+     arr_cart.push(el);
+     
+     localStorage.setItem("ProductItem",JSON.stringify(arr_cart));
+   
+}
+
+ 
+
+
+function openNav() {
+document.getElementById("mySidebar").style.width = "340px";
+document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidebar").style.width = "0";
+document.getElementById("main").style.marginLeft= "0";
+}
+
+ 
+
+</script>

@@ -1,0 +1,185 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+ 
+ <link rel="stylesheet" href="../home/navbar.css">
+ <link rel="stylesheet" href="../home/sidebar.css">
+<link rel="stylesheet" href="./css/advance.css">
+<link rel="stylesheet" href="../footer/footer.css">
+
+<body>
+    <div id="sidebar"></div>
+    <div id="kcnavbar"> </div>
+    
+   <img id="img" src="https://www.jiomart.com/images/category/3/fashion-20200902.jpeg" alt="">
+   <div id="sort">
+    <select name="" onclick="filter()" id="filter1">
+        <option value="">Search Between</option>
+        <option value="50">50</option>
+        <option value="90">90</option>
+        <option value="150">150</option>
+    </select>
+    <button onclick="LTH()">Low to High</button>
+    <button onclick="HTL()">High to Low</button>
+ </div>
+    <div id="main">
+
+      <div id="sidebar">
+
+        <h2>Categories</h2>
+         <div id="categories">
+          
+           <h4>> Mobiles & Tablets</h4>
+           <h4>Fruits & Vegetables</h4>
+           <h4>Women</h4>
+           <h4>Staples</h4>
+           <h4>Snacks & Branded Foods</h4>
+           <h4>Beverage</h4>
+           <h4>Fregrance</h4>
+           <h4>Personal Care & Grooming</h4>
+           <h4>Personal Care</h4>
+           <h4>Home Care</h4>
+           <h4>Mom & Baby</h4>
+           <h4>Accessories</h4>
+           <h4>Home & Kitchen</h4>
+           <h4>Mom & Baby Care</h4>
+           <h4>Books</h4>
+           <h4>Pets</h4>
+         </div>
+
+         <h2>Filter</h2>
+            <h4>inStock Products</h4>
+            <input type="text" id="search" placeholder="Search">
+         <div id="filter">
+            <h2>Categories</h2>
+                <h4>Cups, Mugs, & More</h4>
+                <h4>Gardening</h4>
+                <h4>Herbal & Ayurvedic</h4>
+                <h4>Wall Decore</h4>
+                <h4>Cookwar & Non Stick</h4>
+                <h4> Interior Care</h4>
+                <h4>Home Decore Accents</h4>
+                <h2>Brand</h2>
+            <h4>Whata Your Kick</h4>
+            <h4>CAPMATE</h4>
+            <h4>Cuber Industries</h4>
+            <h4>Riara</h4>
+            <h4>Nirlon</h4>
+            <h4>Pranay</h4>
+            <h4>KALAPAMBH</h4>
+            <h4>Lushomes</h4>
+            <h4>Kraft Seeds</h4>
+            <h4>PETS EMPRE</h4>
+            <h4>JASPO</h4>
+            <h4>Trustbasket</h4>
+            <h4>JAAMSO ROYALS</h4>
+            <h4>RIDERSCART</h4>
+         </div>
+      </div>
+
+       <div id="container"></div>
+      </div> 
+    
+      <div id="footer"></div>
+   
+    </body>
+</html>
+   
+
+<script type="module">
+    import {navbar} from "../home/component/components.js";
+   document.getElementById("kcnavbar").innerHTML=navbar();
+   import {sidebar} from "../home/component/sidebar.js";
+   document.getElementById("sidebar").innerHTML=sidebar();
+
+   import {footer} from "../footer/footer.js";
+   document.getElementById("footer").innerHTML=footer();
+
+   
+   </script>
+
+
+<script > 
+let container=document.getElementById("container");
+
+
+let arr__data=  [   ];
+let renderDom =(data) =>{
+container.innerHTML="";
+
+    data.forEach((ele) => {
+        let div =document.createElement("div");     
+        let name =document.createElement("h3");
+        name.innerText=ele.name;
+        name.id="name";
+        let image =document.createElement("img");
+        image.src=ele.image;
+        let Price =document.createElement("h5");
+        Price.innerText= ele.price;
+        Price.id="price";
+        let div1 =document.createElement("div");
+        AddTOCart = document.createElement("button");   
+        AddTOCart.innerText="Add to Cart"; 
+        PLUS = document.createElement("h1");   
+        PLUS.innerText="+";    
+        div1.append(AddTOCart,PLUS);
+        div1.id="div1";
+        div1.onclick=() =>{
+         AddToCart(ele);
+        }
+        div1.onclick=() =>{
+            ADDTOCART(ele);
+        }
+        div.append(image,name,Price,div1);
+        container.append(div);
+    });
+}
+renderDom(arr__data);
+
+
+let arr_cart = JSON.parse(localStorage.getItem("ProductItem")) || [];
+
+
+let ADDTOCART=(el)=>{
+   console.log(el);
+    let isPresent=false;
+     arr_cart.forEach((ele)=>{
+      if(ele.image==el.image && ele.name==el.name){
+       // console.log("exist",el.image);
+        isPresent=true;
+      }
+     });
+     if(isPresent==true){
+        return;
+     }
+     arr_cart.push(el);
+     //console.log(el);
+     localStorage.setItem("ProductItem",JSON.stringify(arr_cart));
+   
+}
+
+
+ 
+
+ 
+
+
+function openNav() {
+document.getElementById("mySidebar").style.width = "340px";
+document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidebar").style.width = "0";
+document.getElementById("main").style.marginLeft= "0";
+}
+
+ 
+
+</script>
