@@ -29,7 +29,7 @@ body{
     grid-template-columns: 20% 80%;
 }
 #kcproinfo>p{
-    margin-top: -3%;
+    margin-top: 3%;
     font-size: 12px;
     font-style: italic;
     color: #000000;
@@ -118,7 +118,7 @@ body{
     gap: 4%;
 }
 .kcAinfo>h4{
-    margin-top: -3%;
+    margin-top: 3%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
