@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckOut</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/checkout.css">
+    <link rel="stylesheet" href="/styles/preloader.css">
+    <script type="text/javascript" src="/scripts/preloader.js"></script>
+    <link rel="icon"
+href="https://www.jiomart.com/assets/smartweb/favicon.svg"
+type="image/x-icon" />
+
+</head>
+<body>
+    <div id="loader"></div>
+    <div id="navbar">
+        <div onclick="refresh()">
+            <div>JioMart</div>
+            <div>BETA</div>
+        </div>
+    </div>
+    <div id=addressform>
+        <div id="addressContainer">
+            <span class="material-icons location"> place </span>
+            <span>Your Address</span>
+            <form onsubmit="addAdrs(event)" id="myform" action="">
+                <input type="text" name="" id="houseNo" placeholder="Flat/House No">
+                <input type="text" name="" id="FloorNo" placeholder="Floor No">
+                <input type="text" name="" id="TowerNo" placeholder="Tower No">
+                <input type="text" name="" id="BuildingName" placeholder="Building/Apartment Name">
+                <input onkeyup="checkAdd()" type="text" name="" id="Address" placeholder="Address*">
+                <span class="stext" id="addrchk">Please enter a valid address</span>
+                <input type="text" name="" id="Landmark" placeholder="Landmark/Area*">
+                <span class="stext" id="landmChk">Please enter a valid Landmark/Area</span>
+            
+                <button>Save Address</button>
+                <div onclick="goToPayment()" id="totoPayBtm">Proceed To Payment</div>
+            </form>
+        </div>
+    </div>
+
+    <div id="headingCart">CheckOut</div>
+    <button onclick="addressdisp()" id="adrss">+ Add Adress</button>
+    <div id="emptyCart">
+        <div><img src="https://www.jiomart.com/msassets/images/emptycart.svg" alt=""></div>
+        <h5>Your Cart is empty!</h5>
+        <button onclick="addPro()">Add Products</button>
+    </div>
+    <div id="userProCont">
+      <div id="top">
+      </div>
+      <div id ="bot">
+        <h3 id="payment">Payment Details</h3>
+        <div>MRP TOTAL: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="pRc"></span></div>
+        <div>Product Discount <span id="dSc"></span></div>
+        <div>Total Amount: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id= tA></span></div>
+      </div>
+    </div>
+</body>
+</html>
+
+<script src="/scripts/checkout.js"></script>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/payment.css">
+    <link rel="stylesheet" href="/styles/preloader.css">
+    <link rel = "stylesheet" type = "text/css" href = "/styles/preloader.css" />
+    <script type="text/javascript" src="/scripts/preloader.js"></script>
+    <link rel="icon"
+href="https://www.jiomart.com/assets/smartweb/favicon.svg"
+type="image/x-icon" />
+</head>
+
+<body>
+    <div id="loader"></div>
+    <div id="navbar">
+        <div onclick="refresh()">
+            <div>JioMart</div>
+            <div>BETA</div>
+        </div>
+    </div>
+    <div id="updateAfterpy">
+        <h1 style="margin: 10px;">Payment Details</h1>
+        <div id="paymContainer">
+            <div id="paysubcontiner">
+                <div><input class="setinp" type="radio" name="select" value="walletPay" onclick="radioBtns()"> <span
+                        id="image"><img src="https://bfsi.eletsonline.com/wp-content/uploads/2016/12/paytm.png"
+                            alt=""></span> <span style="top: 0px;" class="setspan">Paytm</span></div>
+                <div><input class="setinp" type="radio" name="select" value="walletPhone" onclick="radioBtns()"> <span
+                        id="image"><img src="https://th.bing.com/th/id/OIP.rl_j3EI-RMDdvvXcZPo1awHaHa?pid=ImgDet&rs=1"
+                            alt=""></span> <span class="setspan">PhonePe / UPI</span></div>
+                <div><input class="setinp" type="radio" name="select" value="walletjio" onclick="radioBtns()"> <span
+                        id="image"><img
+                            src="https://lh3.googleusercontent.com/W96hTdauefrmKRXGIO-R0qI9rGY-NBQQfmh1E2mlg5igSJDSAmxlch_a2h3d6ITOumI=w300"
+                            alt=""></span> <span class="setspan">JioMoney</span></div style="top: 0px;">
+                <div><input class="setinp" type="radio" name="select" value="walletM" onclick="radioBtns()"> <span
+                        id="image"><img src="https://clipground.com/images/png-power-easy-pay-hotline-8.png"
+                            alt=""></span>
+                    <span class="setspan">
+                        MobiKwik</span>
+                </div>
+                <div><input class="setinp" type="radio" name="select" id="wallet" onclick="radioBtns()" /> <span
+                        id="image"><img
+                            src="https://cdn.freelogovectors.net/wp-content/uploads/2019/02/freecharge-logo.png"
+                            alt=""></span> <span class="setspan">Freecharge Pay Later | UPI | Wallet</span></div>
+                <div style="margin-bottom: 60px;"><input class="setinp" type="radio" name="select" value="cod"
+                        onclick="radioBtns()"> <span id="image"><img
+                            src="https://image.flaticon.com/icons/png/512/1757/premium/1757609.png" alt=""></span> <span
+                        class="setspan">Cash on Delivery</span></div>
+
+            </div>
+            <div id="totalinfo">
+                <h2>Payment Details</h2>
+                <div>
+                    <span>MRP Total: &nbsp;&nbsp;&nbsp;</span>
+                    <span id="mrp"></span>
+                </div>
+                <div>
+                    <span>Payable Amount: &nbsp;&nbsp;&nbsp;</span>
+                    <span id="fP"></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="addUrl"></div>
+    </div>
+    <div id="orderMsg">
+        <span id="oPlaced"> <span id="oPlacedtxt"> Order placed successfully</span><span class="material-icons">task_alt</span> </span>
+        <h2> <span>Your Order ID :</span> <span id="orderNo"></span></h2>
+        <button onclick="gotohome()" id="hombtn">Continue Shopping</button>
+        <img id="gif" src="/images/order-is-confirmed.gif" alt="successfully"/>
+        
+    </div>
+
+    <script src="/scripts/payment.js"></script>
+   
+</body>
+
+</html>
