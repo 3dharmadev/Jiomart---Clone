@@ -143,5 +143,5 @@ https://github.com/3dharmadev/thoughtful-advertisement-6741
 5.[Gaurav Khairnar]
 - '()
 
-- `( App Download Page,Search Functionality,Address Part )`
+
 
