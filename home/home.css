@@ -159,17 +159,56 @@ animation: slide 12300ms infinite;
 #Access>div{
     width:200px;
     height:100%;
-   
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
     border-radius: 12px;
     margin-left:20px;
 }
 #Access>div>img{
-    width:95%;
+    width:97%;
 }
 #Access>div>img:hover{
     width:99%
 }
+.add{
+    background-color: rgb(17, 127, 218);
+    color:white;
+    width:98%;
+    height:40px;
+    margin-top: 20px;;
+    align-items: center;
+    font-size:15px ;
+}
+#smartdd>h1{
+    margin-left: 46px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 27px;
+}
+#Accessd>div{
+    width:280px;
+    height:100%;
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+    border-radius: 12px;
+    margin-left:20px;
+}
+#Accessd>div>img{
+    width:97%;
+}
+#Accessd>div>img:hover{
+    width:99%
+}
+#Accessd{
+    width:98%;
+    height:240px;
+    
+    margin:auto;
+   
+    margin-top: 10px;
+    display:flex ;
+    gap:8px;
+    margin-bottom: 110px;;
+    margin-left:150px;
 
+   }
 
 #sidebar{
      
@@ -182,4 +221,14 @@ animation: slide 12300ms infinite;
  
  body{
     margin-top: -140px;
+  }
+  .products>img{
+    width:250px;
+  }
+  #poster{
+    width:100%;
+    
+  }
+  #poster>img{
+    width:100%;
   }
