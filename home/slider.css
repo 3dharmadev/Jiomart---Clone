@@ -48,15 +48,17 @@
 			display: none;
 		}
 		section .product{
-			min-width:13%;
+			min-width:14%;
 			height: 86%;
-			border:1px solid rgb(166, 172, 166);
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+			border:1px solid gray;
 			margin:  0 20px  0 0;
 			position: relative;
 			left: 0;
             margin:auto;
 			transition: 0.5s;
             border-radius: 7px;
+			text-align: center;
 
 		}
 		.detail>p>b{
