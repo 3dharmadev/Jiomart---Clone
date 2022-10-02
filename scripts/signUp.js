@@ -63,5 +63,5 @@ function checkSignIn(e) {
 }
 
 function refresh(){
-    window.location.href = "Index.html"
+    window.location.href = "/home/index.html"
 }

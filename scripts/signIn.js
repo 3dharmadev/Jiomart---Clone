@@ -31,11 +31,11 @@ function checkSignIn(e) {
         } else {
             alert("Logged In Successfully!")
             localStorage.setItem("cart", JSON.stringify(arr));
-            window.location.href = "Index.html";
+            window.location.href = "/home/index.html";
         }
         console.log(isPresent);
     }
 }
 function refresh(){
-    window.location.href="Index.html";
+    window.location.href="/home/index.html";
 }

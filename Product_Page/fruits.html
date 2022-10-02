@@ -5,7 +5,12 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <link rel="stylesheet" href="/styles/preloader.css">
+<script type="text/javascript" src="/scripts/preloader.js"></script>
+<link rel="icon"
+href="https://www.jiomart.com/assets/smartweb/favicon.svg"
+type="image/x-icon" />
+   <title>Fruits</title>
 </head>
  
 <link rel="stylesheet" href="../home/navbar.css">
@@ -14,6 +19,7 @@
 <link rel="stylesheet" href="../footer/footer.css">
 
 <body>
+   <div id="loader"></div>
     <div id="sidebar"></div>
     <div id="kcnavbar"> </div>
     
@@ -87,7 +93,7 @@
       </div> 
     
       <div id="footer"></div>
-   
+  
     </body>
 </html>
   
@@ -168,6 +174,44 @@ let arr__data=     [
 "price":"₹ 379.00"
 }
 ];
+
+
+
+
+let arr_one =  JSON.parse(localStorage.getItem("ProductDetails")) || [];
+
+let Redirect =(ele) =>{
+
+arr_one=[];
+arr_one.push(ele);
+
+localStorage.setItem("ProductDetails",JSON.stringify(arr_one));
+window.location.href="/productview.html";
+
+}
+
+let arr_cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+let ADDTOCART=(el)=>{
+  console.log(el);
+    let isPresent=false;
+     arr_cart.forEach((ele)=>{
+      if(ele.image==el.image && ele.name==el.name){
+       
+        isPresent=true;
+      }
+     });
+     if(isPresent==true){
+        return;
+     }
+     console.log(arr_cart);
+     arr_cart.push(el);
+     
+     localStorage.setItem("cart",JSON.stringify(arr_cart));
+   
+}
+
 let renderDom =(data) =>{
 container.innerHTML="";
        
@@ -208,39 +252,9 @@ renderDom(arr__data);
 
 
 
-let arr_cart = JSON.parse(localStorage.getItem("ProductItem")) || [];
 
 
-let ADDTOCART=(el)=>{
-  console.log(el);
-    let isPresent=false;
-     arr_cart.forEach((ele)=>{
-      if(ele.image==el.image && ele.name==el.name){
-       
-        isPresent=true;
-      }
-     });
-     if(isPresent==true){
-        return;
-     }
-     console.log(arr_cart);
-     arr_cart.push(el);
-     
-     localStorage.setItem("ProductItem",JSON.stringify(arr_cart));
-   
-}
 
-let arr_one =  JSON.parse(localStorage.getItem("ProductDetails")) || [];
-
-let Redirect =(ele) =>{
-
-   arr_one=[];
-   arr_one.push(ele);
-
-   localStorage.setItem("ProductDetails",JSON.stringify(arr_one));
-   window.location.href="productview.html";
-
-}
 
 
 

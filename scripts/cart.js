@@ -8,13 +8,20 @@ if (localStorage.getItem("cart") !== null && JSON.parse(localStorage.getItem("ca
   emptyCart.innerHTML = "";
   var productsArr = JSON.parse(localStorage.getItem("cart"));
   var total = 0;
+  //console.log(productsArr)
 
   productsArr.forEach(function (product) {
     let divC = document.createElement("div");
     let image = document.createElement("img");
     let d = document.createElement("div");
     let Price = document.createElement("div");
-    total += +product.price.trim()*product.quantity;
+    //total += +product.price.trim();
+    //console.log(total)
+   prs= product.price;
+   prz=prs.split(" ");
+   let sum=+prz[1].split(",")
+   total+=sum;
+   console.log(total)
 
     
 

@@ -6,18 +6,28 @@ document.getElementById('sidebar').innerHTML=sidebar();
 
 
 let Name=document.querySelector(".kcname");
-let Age=document.querySelector("kcage");
-let Email=document.querySelector("kcemail");
-let Mobile=document.querySelector("kcmobile");
+let Age=document.querySelector(".kcage");
+let Email=document.querySelector(".kcemail");
+let Mobile=document.querySelector(".kcmobile");
 
-let data=JSON.parse(localStorage.getItem("signedUser"));
+let Data=JSON.parse(localStorage.getItem("MartUsers")) || [];
+console.log(Data);
 
-// data.forEach((el)=>{
-//     Name=`${el.Name} ${el.lastName}`;
-//     Age=el.age;
-//     Email=el.Mail;
-//     Mobile=el.Mobile;
-// })
+Name.innerText ="Tejas";
+
+Age.textContent ="12";
+
+
+Name.innerText ="Tejas";
+
+data.forEach((el)=>{
+    console.log(el);
+    // Name=`${el.Name} ${el.lastName}`;
+    // Age=el.age;
+    // Email=el.Mail;
+    // Mobile=el.Mobile;
+})
+//console.log(data)
 let addWishList=()=>{
     window.location.href="wishlist.html"
 }

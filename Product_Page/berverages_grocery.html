@@ -5,7 +5,12 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <link rel="stylesheet" href="/styles/preloader.css">
+<script type="text/javascript" src="/scripts/preloader.js"></script>
+<link rel="icon"
+href="https://www.jiomart.com/assets/smartweb/favicon.svg"
+type="image/x-icon" />
+   <title>Grocery</title>
 </head>
  
  <link rel="stylesheet" href="../home/navbar.css">
@@ -14,6 +19,7 @@
 <link rel="stylesheet" href="../footer/footer.css">
 
 <body>
+   <div id="loader"></div>
     <div id="sidebar"></div>
     <div id="kcnavbar"> </div>
     
@@ -247,7 +253,7 @@ container.innerHTML="";
 renderDom(arr__data);
 
 
-let arr_cart = JSON.parse(localStorage.getItem("ProductItem")) || [];
+let arr_cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 
 let ADDTOCART=(el)=>{
@@ -264,7 +270,7 @@ let ADDTOCART=(el)=>{
      }
      arr_cart.push(el);
      //console.log(el);
-     localStorage.setItem("ProductItem",JSON.stringify(arr_cart));
+     localStorage.setItem("cart",JSON.stringify(arr_cart));
    
 }
 
@@ -276,7 +282,7 @@ let Redirect =(ele) =>{
    arr_one.push(ele);
 
    localStorage.setItem("ProductDetails",JSON.stringify(arr_one));
-   window.location.href="productview.html";
+   window.location.href="/productview.html";
 
 }
 
