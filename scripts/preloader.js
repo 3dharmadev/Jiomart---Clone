@@ -22,5 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function refresh() {
-    window.location.href = "Index.html";
+    window.location.href = "/home/index.html";
+  }
+
+  function profile() {
+    window.location.href = "/MY_Account/account.html";
   }

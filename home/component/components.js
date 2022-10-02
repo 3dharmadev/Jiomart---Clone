@@ -5,7 +5,7 @@ let navbar=()=>{
     <img onclick="refresh()" src="https://www.jiomart.com/assets/version1662994539/smartweb/images/jiomart_logo_beta.svg">
     <input type="text" id="kcsearch" placeholder=  "    Search essentials, groceries, and more...">
     <div id="kcnavbarusername">
-      <img src="https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/profile.svg">
+      <img onclick="profile()" src="https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/profile.svg">
       <p id="sig"><a href="/signIn.html">Sign in / Sign up</a></p>
     </div>
 
