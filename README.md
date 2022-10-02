@@ -50,7 +50,6 @@ _To start with the Project run the following command in terminal in "backend" fo
 - **[Ankita Deb](https://github.com/anki2001ta)**
 - **[ Gaurav Rajendra Khairnar](https://github.com/gauravkh8999)**
 
-- 
 
 ---
 
