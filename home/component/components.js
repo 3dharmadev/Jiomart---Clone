@@ -22,7 +22,8 @@ let navbar=()=>{
             <li class="main_list"><b>Groceries</b>
             <ul>
             <ol>
-            <li>Fruits & Vegetables</li>
+          
+            <li><a href="/Product_Page/fruits.html">Fruits & Vegetables</a></li>
             <li>Dairy & Bakery</li>
             <li>Staples</li>
             <li>Snacks & Branded Foods</li>

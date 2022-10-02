@@ -35,7 +35,7 @@ type="image/x-icon" />
     <button onclick="HTL()">High to Low</button>
  </div>
     <div id="main">
-
+<li><a href="/Product_Page/fruits.html"></a></li>
       <div id="sidebar">
 
         <h2>Categories</h2>
@@ -257,7 +257,7 @@ container.innerHTML="";
 renderDom(arr__data);
 
 
-let arr_cart = JSON.parse(localStorage.getItem("ProductItem")) || [];
+let arr_cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 
 let ADDTOCART=(el)=>{
@@ -273,7 +273,7 @@ let ADDTOCART=(el)=>{
      }
      arr_cart.push(el);
      
-     localStorage.setItem("ProductItem",JSON.stringify(arr_cart));
+     localStorage.setItem("cart",JSON.stringify(arr_cart));
    
 }
 
