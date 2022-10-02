@@ -1,4 +1,4 @@
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,14 +93,13 @@
   
 
 <script type="module">
-  import {navbar} from "../navbar/components.js";
+  import {navbar} from "../home/component/components.js";
  document.getElementById("kcnavbar").innerHTML=navbar();
- import {sidebar} from "../sidebar/sidebar.js";
+ import {sidebar} from "../home/component/sidebar.js";
  document.getElementById("sidebar").innerHTML=sidebar();
 
  import {footer} from "../footer/footer.js";
  document.getElementById("footer").innerHTML=footer();
-
  
  </script>
 
@@ -108,109 +107,67 @@
 <script > 
 let container=document.getElementById("container");
 
-let arr__data=   [
+let arr__data=     [
 {
-"image":"https://www.jiomart.com/images/product/150x150/492336474/home-one-blue-plastic-foldable-table-63x36-5x24-cm-product-images-o492336474-p590945287-0-202205172325.jpg",
-"name":"Home One Blue Plastic Foldable Table 63x36.5x24 cm",
-"price":"₹ 499.00"
-},
-{
-"image":"https://www.jiomart.com/images/product/150x150/492336473/home-one-pink-plastic-foldable-table-63x36-5x24-cm-product-images-o492336473-p590945286-0-202205172325.jpg",
-"name":"Home One Pink Plastic Foldable Table 63x36.5x24 cm",
-"price":"₹ 499.00"
-},
-{
-"image":"https://www.jiomart.com/images/product/150x150/492336475/home-one-ivory-plastic-foldable-table-63x36-5x24-cm-product-images-o492336475-p590945288-0-202205172325.jpg",
-"name":"Home One Ivory Plastic Foldable Table 63x36.5x24 cm",
-"price":"₹ 499.00"
-},
-{
-"image":"https://www.jiomart.com/images/product/150x150/491361364/polyset-optima-blue-polypropylene-stool-29-cm-product-images-o491361364-p491361364-0-202203170336.jpg",
-"name":"Polyset Optima Blue Polypropylene Stool 29 cm",
-"price":"₹ 249.00"
-},
-{
-"image":"https://www.jiomart.com/images/product/150x150/490762315/joyo-comfort-assorted-plastic-patla-14-cm-product-images-o490762315-p490762315-0-202203150841.jpg",
-"name":"Joyo Comfort Assorted Plastic Patla 14 cm",
-"price":"₹ 149.00"
-},
-{
-"image":"https://www.jiomart.com/images/product/150x150/491361365/polyset-optima-baby-pink-plastic-stool-48-cm-product-images-o491361365-p491361365-0-202203150322.jpg",
-"name":"Polyset Optima Baby Pink Plastic Stool 48 cm",
-"price":"₹ 399.00"
-},
-{
-"image":"https://www.jiomart.com/images/product/150x150/490021590/ruchi-cozy-orange-round-patla-product-images-o490021590-p490021590-0-202203151523.jpg",
-"name":"Ruchi Cozy Orange Round Patla",
-"price":"₹ 199.00"
-},
-{
-"image":"https://www.jiomart.com/images/product/150x150/491417154/asian-recto-plastic-assorted-stool-26-cm-product-images-o491417154-p591013564-0-202205172325.jpg",
-"name":"Asian Recto Assorted Colour Plastic Stool 37x26x36 cm",
+"image":"https://www.jiomart.com/images/product/150x150/599990932/blueberry-premium-imported-pack-125-g-product-images-o599990932-p590860270-0-202207282047.jpg",
+"name":"Blueberry Premium Imported Pack 125 g",
 "price":"₹ 229.00"
 },
 {
-"image":"https://www.jiomart.com/images/product/150x150/491456761/cello-roman-grey-and-orange-round-plastic-stool-21-cm-small-product-images-o491456761-p590108380-0-202203171039.jpg",
-"name":"Cello Roman Grey and Orange Round Plastic Stool 21 cm (Small)",
-"price":"₹ 201.00"
+"image":"https://www.jiomart.com/images/product/150x150/599990933/blueberry-premium-imported-pack-250-g-product-images-o599990933-p590860345-0-202207282047.jpg",
+"name":"Blueberry Premium Imported Pack 250 g",
+"price":"₹ 449.00"
 },
 {
-"image":"https://www.jiomart.com/images/product/150x150/rv094pigrz/mbtc-mavic-wrought-iron-folding-study-chair-with-cushion-adjustable-writing-pad-product-images-orv094pigrz-p590830183-0-202110221529.jpg",
-"name":"MBTC Mavic Wrought Iron Folding Study Chair with Cushion & Adjustable Writing Pad",
-"price":"₹ 2,399.00"
+"image":"https://www.jiomart.com/images/product/150x150/599990956/blueberry-premium-imported-pack-500-g-product-images-o599990956-p590860406-0-202207282047.jpg",
+"name":"Blueberry Premium Imported Pack 500 g",
+"price":"₹ 869.00"
 },
 {
-"image":"https://www.jiomart.com/images/product/150x150/rv6pbr9fsp/leadder-kitchenware-new-multipurpose-portable-150-kg-capacity-folding-stool-12-inch-height-product-images-orv6pbr9fsp-p590991663-0-202201082017.jpg",
-"name":"Leadder Kitchenware New Multipurpose Portable 150 kg Capacity Folding Stool (12 Inch Height)",
-"price":"₹ 349.00"
+"image":"https://www.jiomart.com/images/product/150x150/599991412/kiwi-gold-jumbo-premium-imported-3-pc-approx-360-g-420-g-product-images-o599991412-p591778591-0-202207282047.jpg",
+"name":"Kiwi Gold Premium Imported 3 Pc (Approx 240 g - 300 g)",
+"price":"₹ 279.00"
 },
 {
-"image":"https://www.jiomart.com/images/product/150x150/rvcjzdojk0/faverito-new-plastic-folding-stool-brown-white-7-inch-portable-stool-150-kg-capacity-product-images-orvcjzdojk0-p590990384-0-202201071848.jpg",
-"name":"Faverito New Plastic Folding Stool Brown & White 7 Inch Portable Stool (150 kg Capacity)",
-"price":"₹ 299.00"
+"image":"https://www.jiomart.com/images/product/150x150/599991414/kiwi-green-jumbo-premium-imported-3-pc-approx-360-g-420-g-product-images-o599991414-p591778589-0-202207282047.jpg",
+"name":"Kiwi Green Jumbo Premium Imported 3 Pc (Approx 360 g - 420 g)",
+"price":"₹ 279.00"
 },
 {
-"image":"https://www.jiomart.com/images/product/150x150/rvrf1yjkky/pumpum-grey-cotton-single-bed-mattress-72-inch-x-36-inch-product-images-orvrf1yjkky-p590948199-0-202112152107.jpg",
-"name":"PumPum Grey Cotton Single Bed Mattress 72 inch x 36 inch",
-"price":"₹ 399.00"
+"image":"https://www.jiomart.com/images/product/150x150/599990880/dragon-fruit-white-premium-imported-1-pcs-400-g-500-g-product-images-o599990880-p591021540-0-202207281927.jpg",
+"name":"Dragon Fruit White Premium Imported 1 pcs (400 g - 500 g)",
+"price":"₹ 189.00"
 },
 {
-"image":"https://www.jiomart.com/images/product/150x150/rvzcuyf7xf/essential-world-alloy-steel-folding-chair-purple-product-images-orvzcuyf7xf-p592350085-0-202207041611.jpg",
-"name":"Essential World Alloy Steel Folding Chair (Purple)",
-"price":"₹ 1,119.00"
+"image":"https://www.jiomart.com/images/product/150x150/599991411/kiwi-gold-jumbo-premium-imported-2-pc-approx-240-g-280-g-product-images-o599991411-p591778592-0-202207282047.jpg",
+"name":"Kiwi Gold Premium Imported 2 Pc (Approx 160 g - 200 g)",
+"price":"₹ 189.00"
 },
 {
-"image":"https://www.jiomart.com/images/product/150x150/rvvc4m4qxk/curio-centre-white-round-cotton-swing-chair-with-accessories-for-indoor-outdoor-145-cmx57-cmx43-cm-product-images-orvvc4m4qxk-p590800764-0-202109211941.png",
-"name":"Curio Centre White Round Cotton Swing Chair with S Hooks & Rod 145 x 57 x 43 cm",
-"price":"₹ 849.00"
+"image":"https://www.jiomart.com/images/product/150x150/599990775/sweet-tamarind-premium-imported-pack-250-g-product-images-o599990775-p590968389-0-202207282046.jpg",
+"name":"Sweet Tamarind Premium Imported Pack 250 g",
+"price":"₹ 239.00"
 },
 {
-"image":"https://www.jiomart.com/images/product/150x150/rvyugvrjvi/pumpum-single-bed-3-fold-epe-foam-mattress-72-inch-x-36-inch-product-images-orvyugvrjvi-p590948198-0-202112152107.jpg",
-"name":"PumPum Single Bed 3 Fold Epe Foam Mattress 72 inch x 36 inch",
-"price":"₹ 575.00"
+"image":"https://www.jiomart.com/images/product/150x150/599991378/kiwi-gold-jumbo-zespri-premium-imported-1-pc-120-g-140-g-product-images-o599991378-p591272727-0-202207282047.jpg",
+"price":"₹ 99.00"
 },
 {
-"image":"https://www.jiomart.com/images/product/150x150/rvaf0xwluu/royaldeals-portable-retractable-folding-stool-collapsible-telescoping-lightweight-simple-stools-for-adults-camping-fishing-travel-hunting-outdoor-indoor-multicolour-product-images-orvaf0xwluu-p590985203-0-202201050959.jpg",
-"name":"Royaldeals Portable Retractable Folding Stool, Collapsible Telescoping Lightweight Simple Stools for Adults Camping Fishing Travel Hunting Outdoor Indoor,Multicolour",
-"price":"₹ 759.00"
+"image":"https://www.jiomart.com/images/product/150x150/599991413/kiwi-green-jumbo-premium-imported-2-pc-approx-240-g-280-g-product-images-o599991413-p591778590-0-202207282047.jpg",
+"name":"Kiwi Green Jumbo Premium Imported 2 Pc (Approx 240 g - 280 g)",
+"price":"₹ 189.00"
 },
 {
-"image":"https://www.jiomart.com/images/product/150x150/rv0u7nvz31/story-home-multipurpose-black-gold-foldable-adjustable-portable-wooden-laptop-table-60-x-30-x-40cm-product-images-orv0u7nvz31-p590854825-0-202111112019.jpg",
-"name":"Story@Home Multipurpose Black & Gold Foldable Adjustable Portable Wooden Laptop Table 60 X 30 X 40cm",
-"price":"₹ 549.00"
+"image":"https://www.jiomart.com/images/product/150x150/599990755/longan-premium-imported-pack-400-g-product-images-o599990755-p590860282-0-202207290617.jpg",
+"name":"Longan Premium Imported Pack 400 g",
+"price":"₹ 199.00"
 },
 {
-"image":"https://www.jiomart.com/images/product/150x150/rvxjds4wvv/nilkamal-freedom-mini-09-rust-and-weathered-brown-plastic-shoe-cabinet-63-5-x-59-5-x-37-cm-product-images-orvxjds4wvv-p590985745-0-202201051505.jpg",
-"name":"Nilkamal Freedom Mini 09 Rust and Weathered Brown Plastic Shoe Cabinet 63.5 x 59.5 x 37 cm",
-"price":"₹ 2,720.00"
-},
-{
-"image":"https://www.jiomart.com/images/product/150x150/rvzaxuubx6/esquire-delta-plastic-glossy-trolley-coffee-table-brown-product-images-orvzaxuubx6-p590985091-0-202201050902.jpg",
-"name":"Esquire Delta Plastic Glossy Trolley/Coffee Table -Brown",
-"price":"₹ 689.00"
+"image":"https://www.jiomart.com/images/product/150x150/599991283/raspberry-pink-premium-indian-pack-100-g-product-images-o599991283-p591195273-0-202207290622.jpg",
+"name":"Raspberry Pink Premium Indian Pack 100 g",
+"price":"₹ 379.00"
 }
 ];
-
 let renderDom =(data) =>{
 container.innerHTML="";
        
@@ -224,6 +181,9 @@ container.innerHTML="";
         name.id="name";
         let image =document.createElement("img");
         image.src=ele.image;
+        image.onclick = () =>{
+          Redirect(ele);
+        }
         let Price =document.createElement("h5");
         Price.innerText="Price Rs- "+ ele.price;
         Price.id="price";
@@ -269,6 +229,21 @@ let ADDTOCART=(el)=>{
      localStorage.setItem("ProductItem",JSON.stringify(arr_cart));
    
 }
+
+let arr_one =  JSON.parse(localStorage.getItem("ProductDetails")) || [];
+
+let Redirect =(ele) =>{
+
+   arr_one=[];
+   arr_one.push(ele);
+
+   localStorage.setItem("ProductDetails",JSON.stringify(arr_one));
+   window.location.href="productview.html";
+
+}
+
+
+
 
  
 
