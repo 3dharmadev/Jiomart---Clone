@@ -14,9 +14,9 @@ let sidebar=() =>{
           </div>
        
        </div>
-       <a href="">Home</a>
+       <a  onclick="refresh()">Home</a>
        <a href="#">Shop by Category</a>
-       <a href="#">Mylist</a>
+       <a href="/MY_Account/wishlist.html">Mylist</a>
        <a href="#">Jiomart Wallet</a>
        <a href="#">Jiomart Gift Store</a>
        <a href="#">Jiomart Gift Card</a>
