@@ -17,7 +17,7 @@
     <div id="sidebar"></div>
     <div id="kcnavbar"> </div>
     
-   <img id="img" src="https://www.jiomart.com/images/category/3/fashion-20200902.jpeg" alt="">
+   <img id="img" src="https://www.jiomart.com/images/category/33/beverages-20220519.jpeg" alt="">
    <div id="sort">
     <select name="" onclick="filter()" id="filter1">
         <option value="">Search Between</option>
@@ -109,7 +109,108 @@
 let container=document.getElementById("container");
 
 
-let arr__data=  [   ];
+let arr__data=  [
+{
+"image":"https://www.jiomart.com/images/product/150x150/491121060/coca-cola-1-75-l-product-images-o491121060-p491121060-0-202206022121.jpg",
+"name":"Coca Cola 1.75 L",
+"price":"₹ 58.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/491126478/thums-up-1-75-l-product-images-o491126478-p491126478-0-202203150104.jpg",
+"name":"Thums Up 1.75 L",
+"price":"₹ 59.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490001992/brooke-bond-red-label-strong-blend-tea-1-kg-product-images-o490001992-p490001992-0-202208101817.jpg",
+"name":"Brooke Bond Red Label Strong Blend Tea 1 kg",
+"price":"₹ 420.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490004178/tata-agni-tea-1-kg-product-images-o490004178-p490004178-0-202203170913.jpg",
+"name":"Tata Agni Tea 1 kg",
+"price":"₹ 168.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490001797/maaza-mango-drink-600-ml-product-images-o490001797-p490001797-0-202203151523.jpg",
+"name":"Maaza Mango Drink 600 ml",
+"price":"₹ 34.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490967439/brooke-bond-red-label-natural-care-tea-500-g-product-images-o490967439-p490967439-0-202208121842.jpg",
+"name":"Brooke Bond Red Label Natural Care Tea 500 g",
+"price":"₹ 269.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/491187481/bournvita-750-g-product-images-o491187481-p491187481-0-202203150515.jpg",
+"name":"Bournvita 750 g",
+"price":"₹ 258.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490001978/b-natural-litchi-juice-1-l-product-images-o490001978-p490001978-0-202203170223.jpg",
+"name":"B Natural Litchi Juice 1 L",
+"price":"₹ 65.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490001341/tata-gold-leaf-tea-500-g-product-images-o490001341-p490001341-0-202203170442.jpg",
+"name":"Tata Gold Leaf Tea 500 g",
+"price":"₹ 268.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490004180/tata-tea-premium-anokha-swad-chai-1-kg-product-images-o490004180-p490004180-0-202203171009.jpg",
+"name":"Tata Tea Premium Anokha Swad Chai 1 kg",
+"price":"₹ 355.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490249967/b-natural-guava-gush-juice-1-l-product-images-o490249967-p490249967-0-202203151704.jpg",
+"name":"B Natural Guava Gush Juice 1 L",
+"price":"₹ 65.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/491053276/monster-energy-drink-350-ml-can-product-images-o491053276-p491053276-0-202203150515.jpg",
+"name":"Monster Energy Drink 350 ml",
+"price":"₹ 73.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/491276477/horlicks-chocolate-delight-750-g-product-images-o491276477-p491276477-0-202203171038.jpg",
+"name":"Horlicks Chocolate Delight 750 g",
+"price":"₹ 245.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490005092/red-bull-250-ml-pack-of-4-product-images-o490005092-p490005092-0-202203170802.jpg",
+"name":"Red Bull 250 ml (Pack of 4)",
+"price":"₹ 400.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/491086175/tropicano-slice-mango-drink-1-75-l-product-images-o491086175-p491086175-0-202207272007.jpg",
+"name":"Tropicano Slice Mango Drink 1.75 L",
+"price":"₹ 61.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490002010/bru-instant-coffee-powder-100-g-product-images-o490002010-p490002010-0-202203171140.jpg",
+"name":"BRU Instant Coffee Powder 100 g",
+"price":"₹ 127.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490001816/taj-mahal-tea-1-kg-product-images-o490001816-p490001816-0-202206061632.jpg",
+"name":"Taj Mahal Tea 1 kg",
+"price":"₹ 685.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490425757/society-tea-1-kg-product-images-o490425757-p490425757-0-202203170556.jpg",
+"name":"Society Tea 1 kg",
+"price":"₹ 480.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490073715/wagh-bakri-premium-leaf-tea-500-g-product-images-o490073715-p490073715-0-202203141828.jpg",
+"name":"Wagh Bakri Premium Leaf Tea 500 g",
+"price":"₹ 230.00"
+},
+{
+"image":"https://www.jiomart.com/images/product/150x150/490004179/tata-agni-tea-250-g-product-images-o490004179-p490004179-0-202203150357.jpg",
+"name":"Tata Agni Tea 250 g",
+"price":"₹ 46.00"
+}
+];
 let renderDom =(data) =>{
 container.innerHTML="";
 
@@ -198,3 +299,4 @@ document.getElementById("main").style.marginLeft= "0";
  
 
 </script>
+
