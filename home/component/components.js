@@ -2,16 +2,16 @@ let navbar=()=>{
     return `
     <div id="kcnavbarhead">
     <!-- <img scr=""> -->
-    <img src="https://www.jiomart.com/assets/version1662994539/smartweb/images/jiomart_logo_beta.svg">
+    <img onclick="refresh()" src="https://www.jiomart.com/assets/version1662994539/smartweb/images/jiomart_logo_beta.svg">
     <input type="text" id="kcsearch" placeholder=  "    Search essentials, groceries, and more...">
     <div id="kcnavbarusername">
       <img src="https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/profile.svg">
-      <p id="sig">Sign in / Sign up</p>
+      <p id="sig"><a href="/signIn.html">Sign in / Sign up</a></p>
     </div>
 
     <div id="kccart">
       <img src="https://www.jiomart.com/assets/version1664452279/smartweb/images/icons/cart.svg">
-      <h3>Cart</h3>
+      <h3><a href="/cart.html">Cart</a></h3>
     </div>
     
   </div>

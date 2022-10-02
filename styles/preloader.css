@@ -1,4 +1,4 @@
-html, body {
+/* html, body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -6,7 +6,7 @@ html, body {
     background-color: white;
    
     background-size: cover;
-}
+} */
 
 #loader {
     position: fixed;
@@ -19,11 +19,11 @@ html, body {
     background:  white url('/images/71390-shopping-cart-loader.gif') no-repeat center center;
 }
 
-h1 {
+/* h1 {
     position: absolute;
     top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
     font-family: poppins;
-}
+} */

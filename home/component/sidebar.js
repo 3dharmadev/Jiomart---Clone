@@ -9,12 +9,12 @@ let sidebar=() =>{
              <h4 id="hellouser">Hello User</h4>
           </div>
           <div class="second">
-             <a href="">Account</a>
+             <a href="/MY_Account/account.html">Account</a>
              <a href="">Orders</a>
           </div>
        
        </div>
-       <a href="#">Home</a>
+       <a href="">Home</a>
        <a href="#">Shop by Category</a>
        <a href="#">Mylist</a>
        <a href="#">Jiomart Wallet</a>

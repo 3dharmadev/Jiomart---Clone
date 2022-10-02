@@ -20,3 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     loader = document.getElementById('loader');
     loadNow(1);
 });
+
+function refresh() {
+    window.location.href = "Index.html";
+  }
