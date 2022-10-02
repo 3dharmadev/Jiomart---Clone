@@ -7,7 +7,7 @@
   item.map(function (ele) {
     //// getting main image
     var img = document.createElement("img");
-    img.src = ele.mainImg;
+    img.src = ele.image;
     document.querySelector(".singleImg").append(img);
     //// getting item name
     var name = document.createElement("p");
@@ -20,13 +20,13 @@
     price.innerText = ele.price;
     document.querySelector(".price").append(price);
     //// getting strikeOffPrice
-    var strike = document.createElement("p");
-    strike.innerText = ele.strikeOffPrice;
-    document.querySelector(".stikeOffPrice").append(strike);
+    // var strike = document.createElement("p");
+    // strike.innerText = ele.strikeOffPrice;
+    // document.querySelector(".stikeOffPrice").append(strike);
     // // getting sub images
     //// getting sub image one
     var imgOne = document.createElement("img");
-    imgOne.src = ele.subImgOne;
+    imgOne.src = ele.image;
     imgOne.setAttribute("class", "subImage");
     document.querySelector(".imgOne").append(imgOne);
     // calling the function
@@ -63,13 +63,13 @@
   });
 
   // discount
-  var a = document.querySelector(".price").innerText;
-  // console.log(a);
-  var b = document.querySelector(".stikeOffPrice").innerText;
-  var discount = Math.floor(((b - a) / b) * 100);
-  discountValue = `(${discount}% OFF)`;
-  // console.log(discount);
-  document.querySelector(".discount").append(discountValue);
+  // var a = document.querySelector(".price").innerText;
+  // // console.log(a);
+  // var b = document.querySelector(".stikeOffPrice").innerText;
+  // var discount = Math.floor(((b - a) / b) * 100);
+  // discountValue = `(${discount}% OFF)`;
+  // // console.log(discount);
+  // document.querySelector(".discount").append(discountValue);
 
   //// changing the main image
   // one image
