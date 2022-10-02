@@ -120,6 +120,9 @@ container.innerHTML="";
         name.id="name";
         let image =document.createElement("img");
         image.src=ele.image;
+        image.onclick = () =>{
+          Redirect(ele);
+        }
         let Price =document.createElement("h5");
         Price.innerText= ele.price;
         Price.id="price";
@@ -162,6 +165,18 @@ let ADDTOCART=(el)=>{
      //console.log(el);
      localStorage.setItem("ProductItem",JSON.stringify(arr_cart));
    
+}
+
+let arr_one =  JSON.parse(localStorage.getItem("ProductDetails")) || [];
+
+let Redirect =(ele) =>{
+
+   arr_one=[];
+   arr_one.push(ele);
+
+   localStorage.setItem("ProductDetails",JSON.stringify(arr_one));
+   window.location.href="productview.html";
+
 }
 
 
