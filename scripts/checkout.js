@@ -14,11 +14,11 @@ var emptyCart = document.getElementById("emptyCart");
           }
       }
       
-       if(localStorage.getItem("jioUserCart") !== null && JSON.parse(localStorage.getItem("jioUserCart")).length !== 0)
+       if(localStorage.getItem("cart") !== null && JSON.parse(localStorage.getItem("cart")).length !== 0)
        {
           var con = document.getElementById("top");
             emptyCart.innerHTML = "";
-            var productsArr = JSON.parse(localStorage.getItem("jioUserCart"));
+            var productsArr = JSON.parse(localStorage.getItem("cart"));
             var total = 0;
              productsArr.forEach(function(product)
             {

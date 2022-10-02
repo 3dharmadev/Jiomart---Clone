@@ -3,10 +3,10 @@ var productCont = document.getElementById("userProCont");
 
 //  fetching data from cart
 
-if (localStorage.getItem("jioUserCart") !== null && JSON.parse(localStorage.getItem("jioUserCart")).length !== 0) {
+if (localStorage.getItem("cart") !== null && JSON.parse(localStorage.getItem("cart")).length !== 0) {
   var con = document.getElementById("top");
   emptyCart.innerHTML = "";
-  var productsArr = JSON.parse(localStorage.getItem("jioUserCart"));
+  var productsArr = JSON.parse(localStorage.getItem("cart"));
   var total = 0;
 
   productsArr.forEach(function (product) {
@@ -16,6 +16,7 @@ if (localStorage.getItem("jioUserCart") !== null && JSON.parse(localStorage.getI
     let Price = document.createElement("div");
     total += +product.price.trim()*product.quantity;
 
+    
 
     if (product.img == undefined) {
       console.log("product not defined");
@@ -27,22 +28,22 @@ if (localStorage.getItem("jioUserCart") !== null && JSON.parse(localStorage.getI
 
     let Name = document.createElement("div");
     let btn = document.createElement("button");
-    let quan = document.createElement('div');
+    // let quan = document.createElement('div');
     let n = document.createElement('div');
     n.textContent = product.quantity;
 
-    quan.textContent = 'Quantity'
+    // quan.textContent = 'Quantity'
     Name.textContent = "Name of Product: " + product.name;
-    Price.textContent = "Price: " + product.price*product.quantity;
+    Price.textContent = "Price: " + product.price;
     d.append(Name, btn);
-    quan.append(n)
+    // quan.append(n)
     btn.innerText = "Remove";
     btn.style.width = "50%"
     btn.style.border = "none"
     btn.onclick = function () {
       removeEle(product);
     }
-    divC.append(image, d, Price, quan);
+    divC.append(image, d, Price );
     con.append(divC);
 
     let actPrice = document.getElementById("pRc");
@@ -136,7 +137,7 @@ function placeOrder() {
 
 function removeEle(product) {
 
-  var productsArr = JSON.parse(localStorage.getItem("jioUserCart"));
+  var productsArr = JSON.parse(localStorage.getItem("cart"));
   var arr = []
   var cnt = 0;
   for (var i = 0; i < productsArr.length; i++) {
@@ -151,13 +152,13 @@ function removeEle(product) {
     }
   }
   console.log(arr);
-  localStorage.setItem("jioUserCart", JSON.stringify(arr));
+  localStorage.setItem("cart", JSON.stringify(arr));
   checkC();
   window.location.href = "Cart.html";
 }
 checkC();
 function checkC() {
-  if (JSON.parse(localStorage.getItem("jioUserCart")).length == 0) {
+  if (JSON.parse(localStorage.getItem("cart")).length == 0) {
     localStorage.setItem('disc', 'none')
   } else {
     if (localStorage.getItem('disc') == 'masai30') {
