@@ -17,7 +17,7 @@
     <div id="sidebar"></div>
     <div id="kcnavbar"> </div>
     
-   <img id="img" src="https://www.jiomart.com/images/category/3/fashion-20200902.jpeg" alt="">
+   <img id="img" src="https://www.jiomart.com/images/category/1706/furniture-20220519.jpeg" alt="">
    <div id="sort">
     <select name="" onclick="filter()" id="filter1">
         <option value="">Search Between</option>
@@ -225,6 +225,9 @@ container.innerHTML="";
         name.id="name";
         let image =document.createElement("img");
         image.src=ele.image;
+        image.onclick = () =>{
+          Redirect(ele);
+        }
         let Price =document.createElement("h5");
         Price.innerText="Price Rs- "+ ele.price;
         Price.id="price";
@@ -268,6 +271,21 @@ let ADDTOCART=(el)=>{
    
 }
 
+
+let arr_one =  JSON.parse(localStorage.getItem("ProductDetails")) || [];
+
+let Redirect =(ele) =>{
+
+   arr_one=[];
+   arr_one.push(ele);
+
+   localStorage.setItem("ProductDetails",JSON.stringify(arr_one));
+   window.location.href="productview.html";
+
+}
+
+
+ 
  
 
 
