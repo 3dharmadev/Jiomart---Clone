@@ -45,7 +45,7 @@ _To start with the Project run the following command in terminal in "backend" fo
 ### Team Members
 
 - **[Debabrata Satapathy](https://github.com/3dharmadev)**
-- **[Kunal Chitatwar](https://github.com/shivanithakur36)**
+- **[Kunal Chitatwar](https://github.com/kunalchitatwar)**
 - **[Tejas Kasure](https://github.com/tejaskasure)**
 - **[Ankita Deb](https://github.com/anki2001ta)**
 - **[ Gaurav Rajendra Khairnar](https://github.com/gauravkh8999)**
